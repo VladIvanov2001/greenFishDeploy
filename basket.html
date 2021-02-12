@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина товара</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style/components/header.css">
+    <link rel="stylesheet" href="style/components/footer.css">
+    <link rel="stylesheet" href="style/components/card-item-client-choice.css">
+    <link rel="stylesheet" href="style/components/request.css">
+    <link rel="stylesheet" href="style/components/navigation.css">
+    <link rel="stylesheet" href="style/components/delivery-and-map.css">
+    <link rel="stylesheet" href="style/general.css">
+    <link rel="stylesheet" href="style/basket.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=fb603679-5ca0-475f-9617-e25c8a33b360"
+            type="text/javascript"></script>
+</head>
+<body>
+<header class="header">
+    <nav class="nav">
+        <div class="nav__logo">
+            <a href="">
+                <div class="nav__logo-picture"></div>
+                <p class="nav__logo__name">силиконовые приманки</p>
+            </a>
+        </div>
+        <ul class="nav__menu">
+            <li class="nav__menu__item title-small active"><a href="">Каталог</a></li>
+            <li class="nav__menu__item title-small salad"><a href="">О компании</a></li>
+            <li class="nav__menu__item title-small salad"><a href="">Партнерам</a></li>
+            <li class="nav__menu__item title-small salad"><a href="">Покупателям</a></li>
+            <li class="nav__menu__item title-small salad"><a href="">Где купить</a></li>
+        </ul>
+        <div class="nav__basket">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M24.1069 2.8418C29.38 2.8418 33.6595 7.1219 33.6595 12.39L35.566 12.3945C37.6785 12.3945 39.4979 14.1035 39.6292 16.2042L41.0635 39.1534C41.195 41.2574 39.5963 42.9631 37.49 42.9631H10.7238C8.61862 42.9631 7.01888 41.2541 7.15018 39.1534L8.58449 16.2042C8.716 14.1002 10.5316 12.3945 12.6477 12.3945H14.5542C14.5542 7.11904 18.8373 2.8418 24.1069 2.8418ZM29.842 12.3936C29.842 9.23123 27.2731 6.66199 24.1104 6.66199C20.95 6.66199 18.3788 9.22965 18.3788 12.3891L29.842 12.3936ZM14.5549 16.2146H12.6484C12.5501 16.2146 12.4044 16.3513 12.3988 16.4416L10.9943 39.141L37.2348 39.1361L35.8164 16.4416C35.8109 16.3547 35.6616 16.2146 35.5667 16.2146H33.6603V20.0357C33.6603 21.0908 32.8049 21.9462 31.7497 21.9462C30.6946 21.9462 29.8392 21.0908 29.8392 20.0357V16.2146H18.376V20.0357C18.376 21.0908 17.5206 21.9462 16.4654 21.9462C15.4103 21.9462 14.5549 21.0908 14.5549 20.0357V16.2146ZM14.5542 33.4108C14.5542 32.3556 15.4122 31.5002 16.4559 31.5002H31.7578C32.8081 31.5002 33.6596 32.3483 33.6596 33.4108C33.6596 34.4659 32.8015 35.3213 31.7578 35.3213H16.4559C15.4056 35.3213 14.5542 34.4733 14.5542 33.4108Z"
+                      fill="#CBF1D4"/>
+            </svg>
+        </div>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox"/>
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <div class="menu__box">
+                <ul class="menu__box__list">
+                    <li class="title-small"><a class="menu__item" href="#">Каталог</a></li>
+                    <li class="title-small"><a class="menu__item" href="#">О компании</a></li>
+                    <li class="title-small"><a class="menu__item" href="#">Партнерам</a></li>
+                    <li class="title-small"><a class="menu__item" href="#">Покупателям</a></li>
+                    <li class="title-small"><a class="menu__item" href="#">Где купить</a></li>
+                    <li class="description-text-white"><a class="menu__item" href="#">Доставка и оплата</a></li>
+                    <li class="description-text-white"><a class="menu__item" href="#">Магазины-партнёры</a></li>
+                    <li class="description-text-white"><a class="menu__item" href="#">Отзывы</a></li>
+                    <li class="description-text-white"><a class="menu__item" href="#">Блог</a></li>
+                    <li class="description-text-white"><a class="menu__item" href="#">Пользовательское соглашение</a>
+                    </li>
+                    <li>
+                        <div class="menu__box__basket">
+                            <svg width="52" height="48" viewBox="0 0 52 48" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M22.1906 8C26.8778 8 30.6819 11.8045 30.6819 16.4873L32.3765 16.4913C34.2544 16.4913 35.8716 18.0104 35.9883 19.8777L37.2632 40.277C37.3801 42.1472 35.959 43.6634 34.0867 43.6634H10.2945C8.42331 43.6634 7.00132 42.1443 7.11803 40.277L8.39298 19.8777C8.50987 18.0074 10.1237 16.4913 12.0047 16.4913H13.6994C13.6994 11.802 17.5066 8 22.1906 8ZM27.2885 16.4906C27.2885 13.6796 25.005 11.3958 22.1937 11.3958C19.3844 11.3958 17.099 13.6782 17.099 16.4866L27.2885 16.4906ZM13.6997 19.8869H12.005C11.9177 19.8869 11.7882 20.0084 11.7831 20.0887L10.5347 40.266L33.8596 40.2616L32.5988 20.0887C32.5939 20.0115 32.4612 19.8869 32.3769 19.8869H30.6822V23.2834C30.6822 24.2214 29.9219 24.9817 28.984 24.9817C28.0461 24.9817 27.2857 24.2214 27.2857 23.2834V19.8869H17.0962V23.2834C17.0962 24.2214 16.3358 24.9817 15.3979 24.9817C14.46 24.9817 13.6997 24.2214 13.6997 23.2834V19.8869ZM13.6997 35.1724C13.6997 34.2345 14.4623 33.4742 15.3901 33.4742H28.9918C29.9254 33.4742 30.6822 34.228 30.6822 35.1724C30.6822 36.1104 29.9195 36.8707 28.9918 36.8707H15.3901C14.4565 36.8707 13.6997 36.1169 13.6997 35.1724Z"
+                                      fill="#A4ABAC"/>
+                            </svg>
+                            <p class="white">Корзина пуста</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="navigation">
+        <div class="navigation-info container">
+            <ul class="navigation-list ">
+                <li><a class="active-link" href="">Главная</a></li>
+                <li><a class="" href="">Корзина</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="final-order-tablet">
+        <div class="final-order-tablet-container">
+            <div class="final-order-tablet__count">
+                <p class="description-text-black final-order-tablet__count-text">Количество упаковок:</p>
+                <p class="title-small"><span>3</span> шт</p>
+            </div>
+            <div class="final-order-tablet__sum">
+                <p class="description-text-black final-order-tablet__sum-text">Итого:</p>
+                <p class="title-small final-order-tablet__sum-numbers"><span>11,5</span> руб.</p>
+            </div>
+        </div>
+    </div>
+    <section class="container basket">
+        <h1 class="main-title-of-item basket-title">Корзина</h1>
+        <div class="basket-main">
+            <div class="basket-main-left">
+                <div class="basket-main-left__item">
+                    <img src="./images/basket/item-picture.png" alt=""/>
+                    <div class="basket-main-left__item-name">
+                        <a href="#" class="description-text-black">Приманка GF&nbsp;Swing Impact&nbsp;3&Prime;, 10&nbsp;шт.
+                            в упаковке</a>
+                        <span class="description-text-black">Палитра: #01</span>
+                    </div>
+                    <p class="description-text cost-for-item"><span
+                            class="description-text cost-for-one-item">4,0</span> руб.</p>
+                    <div class="basket-main-left__item-count">
+                        <div class="item-count-minus"></div>
+                        <span class="subtitle-text item-count">2</span>
+                        <div class="item-count-plus"></div>
+                    </div>
+                    <div class="basket-main-left__item-final-sum">
+                        <p class="description-text"><span class="description-text final-cost">8,0</span> руб.</p>
+                        <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M13.0016 19C14.1029 19 15 18.1047 15 17.0004V4C15.5558 3.99953 16 3.552 16 3C16 2.44386 15.5519 2 14.9991 2H10C10 0.89543 9.10458 0 8.00001 0C6.89544 0 6.00001 0.89543 6.00001 2H1.00088C0.444639 2 8.58307e-06 2.44772 8.58307e-06 3C8.58307e-06 3.55584 0.447643 3.99953 1.00001 4V17.0004C1.00001 18.1066 1.89473 19 2.99843 19H13.0016ZM13.0019 16.9997C13.0019 16.9997 3.00029 17.0011 3.00029 17.0001V3.99973H13.0003C13.0001 7.20272 12.9999 16.9997 13.0019 16.9997ZM9.00029 6.99754C9.00029 6.44662 9.44416 6 10.0003 6C10.5526 6 11.0003 6.44631 11.0003 6.99754V14.0025C11.0003 14.5534 10.5564 15 10.0003 15C9.44801 15 9.00029 14.5537 9.00029 14.0025V6.99754ZM6.00029 6C5.44415 6 5.00029 6.44662 5.00029 6.99754V14.0025C5.00029 14.5537 5.448 15 6.00029 15C6.55642 15 7.00029 14.5534 7.00029 14.0025V6.99754C7.00029 6.44631 6.55257 6 6.00029 6Z"
+                                  fill="#A4ABAC"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="basket-main-left__item">
+                    <img src="./images/basket/item-picture.png" alt=""/>
+                    <div class="basket-main-left__item-name">
+                        <a href="#" class="description-text-black">Приманка GF&nbsp;Swing Impact&nbsp;3&Prime;, 10&nbsp;шт.
+                            в упаковке</a>
+                        <span class="description-text-black">Палитра: #01</span>
+                    </div>
+                    <div class="cost-for-item">
+                        <p class="description-text cost-for-item-with-sale"><span
+                                class="description-text cost-for-one-item">3,5</span> руб.</p>
+                        <p class="description-text cost-for-item-without-sale"><span>4,5</span> руб.</p>
+                    </div>
+                    <div class="basket-main-left__item-count">
+                        <div class="item-count-minus"></div>
+                        <span class="subtitle-text item-count">1</span>
+                        <div class="item-count-plus"></div>
+                    </div>
+                    <div class="basket-main-left__item-final-sum">
+                        <p class="description-text"><span class="description-text final-cost">3,5</span> руб.</p>
+                        <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M13.0016 19C14.1029 19 15 18.1047 15 17.0004V4C15.5558 3.99953 16 3.552 16 3C16 2.44386 15.5519 2 14.9991 2H10C10 0.89543 9.10458 0 8.00001 0C6.89544 0 6.00001 0.89543 6.00001 2H1.00088C0.444639 2 8.58307e-06 2.44772 8.58307e-06 3C8.58307e-06 3.55584 0.447643 3.99953 1.00001 4V17.0004C1.00001 18.1066 1.89473 19 2.99843 19H13.0016ZM13.0019 16.9997C13.0019 16.9997 3.00029 17.0011 3.00029 17.0001V3.99973H13.0003C13.0001 7.20272 12.9999 16.9997 13.0019 16.9997ZM9.00029 6.99754C9.00029 6.44662 9.44416 6 10.0003 6C10.5526 6 11.0003 6.44631 11.0003 6.99754V14.0025C11.0003 14.5534 10.5564 15 10.0003 15C9.44801 15 9.00029 14.5537 9.00029 14.0025V6.99754ZM6.00029 6C5.44415 6 5.00029 6.44662 5.00029 6.99754V14.0025C5.00029 14.5537 5.448 15 6.00029 15C6.55642 15 7.00029 14.5534 7.00029 14.0025V6.99754C7.00029 6.44631 6.55257 6 6.00029 6Z"
+                                  fill="#A4ABAC"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="basket-main-left__item-mobile">
+                    <div class="basket-main-left__item-mobile__top">
+                        <img src="./images/basket/item-picture.png" alt=""/>
+                        <div class="basket-main-left__item-name">
+                            <a href="#" class="description-text-black">Приманка GF&nbsp;Swing Impact&nbsp;3&Prime;, 10&nbsp;шт.
+                                в упаковке</a>
+                            <span class="description-text-black">Палитра: #01</span>
+                        </div>
+                    </div>
+                    <div class="basket-main-left__item-mobile__bottom">
+                        <div class="cost-for-item">
+                            <p class="description-text cost-for-item-with-sale"><span
+                                    class="description-text cost-for-one-item-mobile">3,5</span> руб.</p>
+                            <p class="description-text cost-for-item-without-sale-mobile"><span>4,5</span> руб.</p>
+                        </div>
+                        <div class="basket-main-left__item-count">
+                            <div class="item-count-minus"></div>
+                            <span class="subtitle-text item-count-mobile">1</span>
+                            <div class="item-count-plus"></div>
+                        </div>
+                        <div class="basket-main-left__item-final-sum">
+                            <p class="description-text"><span class="description-text final-cost-mobile">3,5</span> руб.</p>
+                            <svg width="16" height="19" viewBox="0 0 16 19" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M13.0016 19C14.1029 19 15 18.1047 15 17.0004V4C15.5558 3.99953 16 3.552 16 3C16 2.44386 15.5519 2 14.9991 2H10C10 0.89543 9.10458 0 8.00001 0C6.89544 0 6.00001 0.89543 6.00001 2H1.00088C0.444639 2 8.58307e-06 2.44772 8.58307e-06 3C8.58307e-06 3.55584 0.447643 3.99953 1.00001 4V17.0004C1.00001 18.1066 1.89473 19 2.99843 19H13.0016ZM13.0019 16.9997C13.0019 16.9997 3.00029 17.0011 3.00029 17.0001V3.99973H13.0003C13.0001 7.20272 12.9999 16.9997 13.0019 16.9997ZM9.00029 6.99754C9.00029 6.44662 9.44416 6 10.0003 6C10.5526 6 11.0003 6.44631 11.0003 6.99754V14.0025C11.0003 14.5534 10.5564 15 10.0003 15C9.44801 15 9.00029 14.5537 9.00029 14.0025V6.99754ZM6.00029 6C5.44415 6 5.00029 6.44662 5.00029 6.99754V14.0025C5.00029 14.5537 5.448 15 6.00029 15C6.55642 15 7.00029 14.5534 7.00029 14.0025V6.99754C7.00029 6.44631 6.55257 6 6.00029 6Z"
+                                      fill="#A4ABAC"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket-main-left__item-mobile">
+                    <div class="basket-main-left__item-mobile__top">
+                        <img src="./images/basket/item-picture.png" alt=""/>
+                        <div class="basket-main-left__item-name">
+                            <a href="#" class="description-text-black">Приманка GF&nbsp;Swing Impact&nbsp;3&Prime;, 10&nbsp;шт.
+                                в упаковке</a>
+                            <span class="description-text-black">Палитра: #01</span>
+                        </div>
+                    </div>
+                    <div class="basket-main-left__item-mobile__bottom">
+                        <div class="cost-for-item">
+                            <p class="description-text cost-for-item-with-sale"><span
+                                    class="description-text cost-for-one-item-mobile">3,5</span> руб.</p>
+                            <p class="description-text cost-for-item-without-sale-mobile"><span>4,5</span> руб.</p>
+                        </div>
+                        <div class="basket-main-left__item-count">
+                            <div class="item-count-minus"></div>
+                            <span class="subtitle-text item-count-mobile">1</span>
+                            <div class="item-count-plus"></div>
+                        </div>
+                        <div class="basket-main-left__item-final-sum">
+                            <p class="description-text"><span class="description-text final-cost-mobile">3,5</span> руб.</p>
+                            <svg width="16" height="19" viewBox="0 0 16 19" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M13.0016 19C14.1029 19 15 18.1047 15 17.0004V4C15.5558 3.99953 16 3.552 16 3C16 2.44386 15.5519 2 14.9991 2H10C10 0.89543 9.10458 0 8.00001 0C6.89544 0 6.00001 0.89543 6.00001 2H1.00088C0.444639 2 8.58307e-06 2.44772 8.58307e-06 3C8.58307e-06 3.55584 0.447643 3.99953 1.00001 4V17.0004C1.00001 18.1066 1.89473 19 2.99843 19H13.0016ZM13.0019 16.9997C13.0019 16.9997 3.00029 17.0011 3.00029 17.0001V3.99973H13.0003C13.0001 7.20272 12.9999 16.9997 13.0019 16.9997ZM9.00029 6.99754C9.00029 6.44662 9.44416 6 10.0003 6C10.5526 6 11.0003 6.44631 11.0003 6.99754V14.0025C11.0003 14.5534 10.5564 15 10.0003 15C9.44801 15 9.00029 14.5537 9.00029 14.0025V6.99754ZM6.00029 6C5.44415 6 5.00029 6.44662 5.00029 6.99754V14.0025C5.00029 14.5537 5.448 15 6.00029 15C6.55642 15 7.00029 14.5534 7.00029 14.0025V6.99754C7.00029 6.44631 6.55257 6 6.00029 6Z"
+                                      fill="#A4ABAC"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="basket-main-left-note description-text">
+                    При заказе до&nbsp;5&nbsp;упаковок возможен только самовывоз из&nbsp;магазинов&nbsp;партнёров. От&nbsp;5&nbsp;упаковок
+                    &mdash;доставка почтой наложенным платежём или самовывоз.
+                </div>
+                <div class="basket-main-left-order">
+                    <p class="big-title">Оформление заказа</p>
+                    <div class="basket-main-left-order-checkbox">
+                        <label class="basket-main-left-order-container">
+                            <span>Самовывоз: <span class="link-to-shop description-text">Магазин-партнёр</span></span>
+                            <input checked="checked" type="radio" name="radio" value="pickup"/>
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="basket-main-left-order-container">
+                            <span class="info-about-mail">По почте от 5 упаковок</span>
+                            <input name="radio" type="radio" id="mail" value="mail"/>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="basket-main-left-personal">
+                        <label>
+                            <span class="description-text-black">Имя</span>
+                            <input type="text" class="name"/>
+                        </label>
+                        <label>
+                            <span class="description-text-black">Номер телефона</span>
+                            <input type="text" class="phone"/>
+                        </label>
+                        <label>
+                            <span class="description-text-black">Эл. почта</span>
+                            <input type="text" class="email"/>
+                        </label>
+                    </div>
+                    <div class="basket-main-left-textarea">
+                        <p class="description-text-black">Адрес доставки / Комментарий</p>
+                        <textarea name="comment" class="comment"></textarea>
+                    </div>
+                </div>
+                <div class="basket-main__right__agreement agreement-for-tablet">
+                    <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.00444 5.37056C1.76036 5.12648 1.36464 5.12648 1.12056 5.37056C0.876481 5.61464 0.876481 6.01036 1.12056 6.25444L4.87056 10.0044C5.11464 10.2485 5.51036 10.2485 5.75444 10.0044L13.8794 1.87944C14.1235 1.63536 14.1235 1.23964 13.8794 0.995558C13.6354 0.751481 13.2396 0.751481 12.9956 0.995558L5.3125 8.67862L2.00444 5.37056Z"
+                              fill="#3CB156"/>
+                    </svg>
+                    <p class="basket-main__right__agreement-text">принимаю условия <a href="#">пользовательского
+                        соглашения</a></p>
+                </div>
+                <div class="basket-main__right__send-order-mobile">Отправить заказ</div>
+            </div>
+            <div class="basket-main__right">
+                <div class="basket-main__right__count">
+                    <p class="title-small basket-main__right-params">Количество упаковок</p>
+                    <p class="final-count"><span>3</span> шт</p>
+                </div>
+                <div class="basket-main__right__sum">
+                    <p class="title-small basket-main__right-params">ИТОГО</p>
+                    <span class="final-sum"><span>11,5</span> руб.</span>
+                </div>
+                <div class="basket-main__right__pickedup">
+                    <span>Самовывоз: <span class="link-to-shop description-text">Магазин-партнёр</span></span>
+                </div>
+                <div class="basket-main__right__personal-info">
+                    <p class="basket-main__right__personal-info-title">Данные покупателя: </p>
+                    <div class="buyer-info">
+                        <span class="buyer-info__name"></span>
+                        <span class="buyer-info__phone"></span>
+                        <p class="buyer-info__email"></p>
+                    </div>
+                    <p class="description-text-black order-notification">Укажите Имя, номер телефона и эл.почту</p>
+                </div>
+                <div class="basket-main__right__agreement">
+                    <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.00444 5.37056C1.76036 5.12648 1.36464 5.12648 1.12056 5.37056C0.876481 5.61464 0.876481 6.01036 1.12056 6.25444L4.87056 10.0044C5.11464 10.2485 5.51036 10.2485 5.75444 10.0044L13.8794 1.87944C14.1235 1.63536 14.1235 1.23964 13.8794 0.995558C13.6354 0.751481 13.2396 0.751481 12.9956 0.995558L5.3125 8.67862L2.00444 5.37056Z"
+                              fill="#3CB156"/>
+                    </svg>
+                    <p class="basket-main__right__agreement-text">принимаю условия <a href="#">пользовательского
+                        соглашения</a></p>
+                </div>
+                <div class="basket-main__right__send-order">Отправить заказ</div>
+            </div>
+        </div>
+    </section>
+    <section class="container checked">
+        <h3 class="big-title">Вы просматривали</h3>
+        <div class="checked__items">
+            <a href="" class="main-info__catalog__products-item">
+                <div class="main-info__catalog__products-image">
+                    <img alt="" src="images/catalog/item-card.png"/>
+                    <div class="main-info__catalog__products-image-fast-review">
+                        Быстрый просмотр
+                    </div>
+                </div>
+                <div class="main-info__catalog__products-item-info">
+                    <div class="main-info__catalog__products-item-title">
+                        <span class="main-info__catalog__products-item-cost cost-old-price">4,0 руб</span>
+                        <span class="main-info__catalog__products-item-cost cost-new-price">3,5 руб</span>
+                    </div>
+                    <p class="main-info__catalog__products-item-type description-text-black">Приманка GF Swing
+                        Impact Fat 3,3”</p>
+                    <p class="main-info__catalog__products-item-count">Количество в упаковке: 6 шт</p>
+                </div>
+            </a>
+            <a href="" class="main-info__catalog__products-item">
+                <div class="main-info__catalog__products-image">
+                    <img alt="" src="images/catalog/item-card.png"/>
+                    <div class="main-info__catalog__products-image-fast-review">
+                        Быстрый просмотр
+                    </div>
+                </div>
+                <div class="main-info__catalog__products-item-info">
+                    <div class="main-info__catalog__products-item-title">
+                        <span class="main-info__catalog__products-item-cost cost-old-price">4,0 руб</span>
+                        <span class="main-info__catalog__products-item-cost cost-new-price">3,5 руб</span>
+                    </div>
+                    <p class="main-info__catalog__products-item-type description-text-black">Приманка GF Swing
+                        Impact Fat 3,3”</p>
+                    <p class="main-info__catalog__products-item-count">Количество в упаковке: 6 шт</p>
+                </div>
+            </a>
+            <a href="" class="main-info__catalog__products-item">
+                <div class="main-info__catalog__products-image">
+                    <img alt="" src="images/catalog/item-card.png"/>
+                    <div class="main-info__catalog__products-image-fast-review">
+                        Быстрый просмотр
+                    </div>
+                </div>
+                <div class="main-info__catalog__products-item-info">
+                    <div class="main-info__catalog__products-item-title">
+                        <span class="main-info__catalog__products-item-cost cost-old-price">4,0 руб</span>
+                        <span class="main-info__catalog__products-item-cost cost-new-price">3,5 руб</span>
+                    </div>
+                    <p class="main-info__catalog__products-item-type description-text-black">Приманка GF Swing
+                        Impact Fat 3,3”</p>
+                    <p class="main-info__catalog__products-item-count">Количество в упаковке: 6 шт</p>
+                </div>
+            </a>
+            <a href="" class="main-info__catalog__products-item">
+                <div class="main-info__catalog__products-image">
+                    <img alt="" src="images/catalog/item-card.png"/>
+                    <div class="main-info__catalog__products-image-fast-review">
+                        Быстрый просмотр
+                    </div>
+                </div>
+                <div class="main-info__catalog__products-item-info">
+                    <div class="main-info__catalog__products-item-title">
+                        <span class="main-info__catalog__products-item-cost cost-old-price">4,0 руб</span>
+                        <span class="main-info__catalog__products-item-cost cost-new-price">3,5 руб</span>
+                    </div>
+                    <p class="main-info__catalog__products-item-type description-text-black">Приманка GF Swing
+                        Impact Fat 3,3”</p>
+                    <p class="main-info__catalog__products-item-count">Количество в упаковке: 6 шт</p>
+                </div>
+            </a>
+        </div>
+        <div class="container">
+            <div class="swiper-container-checked">
+                <div class="swiper-wrapper swiper-wrapper-checked">
+                    <div class="swiper-slide swiper-slide-checked">
+                        <a href="" class="main-info__catalog__products-item">
+                            <div class="main-info__catalog__products-image">
+                                <img alt="" src="images/catalog/item-card.png"/>
+                                <div class="main-info__catalog__products-image-fast-review">
+                                    Быстрый просмотр
+                                </div>
+                            </div>
+                            <div class="main-info__catalog__products-item-info">
+                                <div class="main-info__catalog__products-item-title">
+                                    <span class="main-info__catalog__products-item-cost cost-old-price">4,0 руб</span>
+                                    <span class="main-info__catalog__products-item-cost cost-new-price">3,5 руб</span>
+                                </div>
+                                <p class="main-info__catalog__products-item-type description-text-black">Приманка GF
+                                    Swing
+                                    Impact Fat 3,3”</p>
+                                <p class="main-info__catalog__products-item-count">Количество в упаковке: 6 шт</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper-slide-checked">
+                        <a href="" class="main-info__catalog__products-item">
+                            <div class="main-info__catalog__products-image">
+                                <img alt="" src="images/catalog/item-card.png"/>
+                                <div class="main-info__catalog__products-image-fast-review">
+                                    Быстрый просмотр
+                                </div>
+                            </div>
+                            <div class="main-info__catalog__products-item-info">
+                                <div class="main-info__catalog__products-item-title">
+                                    <span class="main-info__catalog__products-item-cost cost-old-price">4,0 руб</span>
+                                    <span class="main-info__catalog__products-item-cost cost-new-price">3,5 руб</span>
+                                </div>
+                                <p class="main-info__catalog__products-item-type description-text-black">Приманка GF
+                                    Swing
+                                    Impact Fat 3,3”</p>
+                                <p class="main-info__catalog__products-item-count">Количество в упаковке: 6 шт</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper-slide-checked">
+                        <a href="" class="main-info__catalog__products-item">
+                            <div class="main-info__catalog__products-image">
+                                <img alt="" src="images/catalog/item-card.png"/>
+                                <div class="main-info__catalog__products-image-fast-review">
+                                    Быстрый просмотр
+                                </div>
+                            </div>
+                            <div class="main-info__catalog__products-item-info">
+                                <div class="main-info__catalog__products-item-title">
+                                    <span class="main-info__catalog__products-item-cost cost-old-price">4,0 руб</span>
+                                    <span class="main-info__catalog__products-item-cost cost-new-price">3,5 руб</span>
+                                </div>
+                                <p class="main-info__catalog__products-item-type description-text-black">Приманка GF
+                                    Swing
+                                    Impact Fat 3,3”</p>
+                                <p class="main-info__catalog__products-item-count">Количество в упаковке: 6 шт</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide swiper-slide-checked">
+                        <a href="" class="main-info__catalog__products-item">
+                            <div class="main-info__catalog__products-image">
+                                <img alt="" src="images/catalog/item-card.png"/>
+                                <div class="main-info__catalog__products-image-fast-review">
+                                    Быстрый просмотр
+                                </div>
+                            </div>
+                            <div class="main-info__catalog__products-item-info">
+                                <div class="main-info__catalog__products-item-title">
+                                    <span class="main-info__catalog__products-item-cost cost-old-price">4,0 руб</span>
+                                    <span class="main-info__catalog__products-item-cost cost-new-price">3,5 руб</span>
+                                </div>
+                                <p class="main-info__catalog__products-item-type description-text-black">Приманка GF
+                                    Swing
+                                    Impact Fat 3,3”</p>
+                                <p class="main-info__catalog__products-item-count">Количество в упаковке: 6 шт</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div class="props">
+        <div class="props__closed-btn">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M42.5522 5.22029C43.5936 4.17891 43.5937 2.49047 42.5523 1.44905C41.5109 0.407634 39.8225 0.407605 38.781 1.44898L22 18.2295L5.21888 1.44898C4.17746 0.407605 2.48902 0.407634 1.44764 1.44905C0.406262 2.49047 0.406291 4.17891 1.44771 5.22029L18.2287 22.0007L1.44771 38.781C0.406291 39.8224 0.406262 41.5108 1.44764 42.5522C2.48902 43.5937 4.17746 43.5937 5.21888 42.5523L22 25.7718L38.781 42.5523C39.8225 43.5937 41.5109 43.5937 42.5523 42.5522C43.5937 41.5108 43.5936 39.8224 42.5522 38.781L25.7713 22.0007L42.5522 5.22029Z"
+                      fill="#C4C4C4"/>
+            </svg>
+        </div>
+        <div class="props__container">
+            <div class="props__container__info">
+                <h3>Реквизиты</h3>
+                <p class="props__container__info-text">ИП Лимановский Алексей& Анатольевич,<br/>УНП& 391537283 р/с
+                    BY21BELB3013000010226000<br/> в ОАО &laquo;Банк БелВЭБ&raquo; БИК: BELNNY2X
+                </p>
+            </div>
+            <div class="props__container-for-btn">
+                <a class="props__container__copy">Скопировать</a>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__catalog">
+            <h3 class="title-small">Каталог приманок</h3>
+            <a class="description-text-white" href="">Одноцветные</a>
+            <a class="description-text-white" href="">Двухцветные</a>
+            <p class="footer__catalog__phone-number">+375 (29) 899-83-68</p>
+            <a class="footer__catalog__props white">Реквизиты</a>
+        </div>
+        <div class="footer__about-company">
+            <h3 class="title-small">О&nbsp;компании</h3>
+            <a class="description-text-white" href="">Производство</a>
+            <a class="description-text-white" href="">Партнёрам</a>
+            <a class="description-text-white" href="">Контакты</a>
+        </div>
+        <div class="footer__clients">
+            <h3 class="title-small">Покупателям</h3>
+            <a class="description-text-white" href="">Доставка и оплата</a>
+            <a class="description-text-white" href="">Магазины-партнёры</a>
+            <a class="description-text-white" href="">Отзывы</a>
+            <a class="description-text-white" href="">Блог</a>
+            <a class="description-text-white" href="">Пользовательское соглашение</a>
+        </div>
+        <div class="footer__social-networks">
+            <h3 class="title-small">Наши соцсети</h3>
+            <a class="description-text-white" href="">Вконтакте</a>
+            <a class="description-text-white" href="">Инстаграм</a>
+            <p class="description-text-white">greenfishbaits@gmail.com</p>
+        </div>
+        <div class="footer__info">
+            <p class="description-text-white">Сайт разработал &laquo;Чеширский Кот&raquo; на&nbsp;1С-Битрикс</p>
+            <p class="description-text-white">&copy; Green Fish 2020</p>
+        </div>
+    </div>
+</footer>
+<script src="https://unpkg.com/imask"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/propsPage.js"></script>
+<script src="js/basket/basket.js"></script>
+<script src="js/basket/basketSlider.js"></script>
+</body>
+</html>

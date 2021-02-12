@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отзывы</title>
+  <link rel="stylesheet" href="style/libs/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style/libs/swiper-bundle.css">
+  <link rel="stylesheet" href="style/general.css">
+  <link rel="stylesheet" href="style/components/header.css">
+  <link rel="stylesheet" href="style/components/footer.css">
+  <link rel="stylesheet" href="style/components/navigation.css">
+  <link rel="stylesheet" href="style/components/instagram.css">
+  <link rel="stylesheet" href="style/feedback.css">
+  <link rel="stylesheet" href="style/components/add-review.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__logo">
+        <a href="">
+          <div class="nav__logo-picture"></div>
+          <p class="nav__logo__name">силиконовые приманки</p>
+        </a>
+      </div>
+      <ul class="nav__menu">
+        <li class="nav__menu__item title-small active"><a href="">Каталог</a></li>
+        <li class="nav__menu__item title-small salad"><a href="">О компании</a></li>
+        <li class="nav__menu__item title-small salad"><a href="">Партнерам</a></li>
+        <li class="nav__menu__item title-small salad"><a href="">Покупателям</a></li>
+        <li class="nav__menu__item title-small salad"><a href="">Где купить</a></li>
+      </ul>
+      <div class="nav__basket">
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M24.1069 2.8418C29.38 2.8418 33.6595 7.1219 33.6595 12.39L35.566 12.3945C37.6785 12.3945 39.4979 14.1035 39.6292 16.2042L41.0635 39.1534C41.195 41.2574 39.5963 42.9631 37.49 42.9631H10.7238C8.61862 42.9631 7.01888 41.2541 7.15018 39.1534L8.58449 16.2042C8.716 14.1002 10.5316 12.3945 12.6477 12.3945H14.5542C14.5542 7.11904 18.8373 2.8418 24.1069 2.8418ZM29.842 12.3936C29.842 9.23123 27.2731 6.66199 24.1104 6.66199C20.95 6.66199 18.3788 9.22965 18.3788 12.3891L29.842 12.3936ZM14.5549 16.2146H12.6484C12.5501 16.2146 12.4044 16.3513 12.3988 16.4416L10.9943 39.141L37.2348 39.1361L35.8164 16.4416C35.8109 16.3547 35.6616 16.2146 35.5667 16.2146H33.6603V20.0357C33.6603 21.0908 32.8049 21.9462 31.7497 21.9462C30.6946 21.9462 29.8392 21.0908 29.8392 20.0357V16.2146H18.376V20.0357C18.376 21.0908 17.5206 21.9462 16.4654 21.9462C15.4103 21.9462 14.5549 21.0908 14.5549 20.0357V16.2146ZM14.5542 33.4108C14.5542 32.3556 15.4122 31.5002 16.4559 31.5002H31.7578C32.8081 31.5002 33.6596 32.3483 33.6596 33.4108C33.6596 34.4659 32.8015 35.3213 31.7578 35.3213H16.4559C15.4056 35.3213 14.5542 34.4733 14.5542 33.4108Z"
+            fill="#CBF1D4" />
+        </svg>
+      </div>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <div class="menu__box">
+          <ul class="menu__box__list">
+            <li class="title-small"><a class="menu__item" href="#">Каталог</a></li>
+            <li class="title-small"><a class="menu__item" href="#">О компании</a></li>
+            <li class="title-small"><a class="menu__item" href="#">Партнерам</a></li>
+            <li class="title-small"><a class="menu__item" href="#">Покупателям</a></li>
+            <li class="title-small"><a class="menu__item" href="#">Где купить</a></li>
+            <li class="description-text-white"><a class="menu__item" href="#">Доставка и оплата</a></li>
+            <li class="description-text-white"><a class="menu__item" href="#">Магазины-партнёры</a></li>
+            <li class="description-text-white"><a class="menu__item" href="#">Отзывы</a></li>
+            <li class="description-text-white"><a class="menu__item" href="#">Блог</a></li>
+            <li class="description-text-white"><a class="menu__item" href="#">Пользовательское соглашение</a>
+            </li>
+            <li>
+              <div class="menu__box__basket">
+                <svg width="52" height="48" viewBox="0 0 52 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M22.1906 8C26.8778 8 30.6819 11.8045 30.6819 16.4873L32.3765 16.4913C34.2544 16.4913 35.8716 18.0104 35.9883 19.8777L37.2632 40.277C37.3801 42.1472 35.959 43.6634 34.0867 43.6634H10.2945C8.42331 43.6634 7.00132 42.1443 7.11803 40.277L8.39298 19.8777C8.50987 18.0074 10.1237 16.4913 12.0047 16.4913H13.6994C13.6994 11.802 17.5066 8 22.1906 8ZM27.2885 16.4906C27.2885 13.6796 25.005 11.3958 22.1937 11.3958C19.3844 11.3958 17.099 13.6782 17.099 16.4866L27.2885 16.4906ZM13.6997 19.8869H12.005C11.9177 19.8869 11.7882 20.0084 11.7831 20.0887L10.5347 40.266L33.8596 40.2616L32.5988 20.0887C32.5939 20.0115 32.4612 19.8869 32.3769 19.8869H30.6822V23.2834C30.6822 24.2214 29.9219 24.9817 28.984 24.9817C28.0461 24.9817 27.2857 24.2214 27.2857 23.2834V19.8869H17.0962V23.2834C17.0962 24.2214 16.3358 24.9817 15.3979 24.9817C14.46 24.9817 13.6997 24.2214 13.6997 23.2834V19.8869ZM13.6997 35.1724C13.6997 34.2345 14.4623 33.4742 15.3901 33.4742H28.9918C29.9254 33.4742 30.6822 34.228 30.6822 35.1724C30.6822 36.1104 29.9195 36.8707 28.9918 36.8707H15.3901C14.4565 36.8707 13.6997 36.1169 13.6997 35.1724Z"
+                    fill="#A4ABAC" />
+                </svg>
+                <p class="white">Корзина пуста</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="navigation">
+      <div class="navigation-info container">
+        <ul class="navigation-list ">
+          <li><a class="active-link" href="">Главная</a></li>
+          <li>Отзывы</li>
+        </ul>
+      </div>
+    </div>
+    <div class="feedback container">
+      <section class="feedback-main">
+        <h1 class="main-title-of-item">Отзывы о продукте и компании</h1>
+        <!-- Отзывы -->
+        <div class="feedback-main-list">
+          <!-- Здесь выводятся отзывы -->
+          <div class="feedback-main-list-item">
+            <div class="feedback-main-list-item__text">
+              <p class="description-text-black">
+                Первая осенняя рыбалка. Выбор пал на р. Щара, решил проведать места где ловил весной. Доехать было
+                тяжеловато, а ещё тяжелей было продвигаться по берегу, заросло все мама не горюй... За три часа ловли
+                реализовал одну поклевку. Сезон открыт, всем НХНЧ!
+              </p>
+              <p class="description-text-black">
+                Сработал Swing Impact 4” в 13 расцветке от Green Fish.
+              </p>
+            </div>
+            <div class="feedback-main-list-item__gallery">
+              <!-- Здесь выводятся все слайды относящиеся к текущему отзыву -->
+              <div class="feedback-main-list-item__wrapper swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/feedback/gallery-sample.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/feedback/gallery-sample.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/feedback/gallery-sample.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/feedback/gallery-sample.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/feedback/gallery-sample.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/feedback/gallery-sample.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/feedback/gallery-sample.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/feedback/gallery-sample.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="feedback-main-list-item__desc">
+              Отчет с рыбалки от нашего друга, 19 сентября 2020
+            </div>
+          </div>
+          <div class="feedback-main-list-item">
+            <div class="feedback-main-list-item__text">
+              <p class="description-text-black">
+                Первая осенняя рыбалка. Выбор пал на р. Щара, решил проведать места где ловил весной. Доехать было
+                тяжеловато, а ещё тяжелей было продвигаться по берегу, заросло все мама не горюй... За три часа ловли
+                реализовал одну поклевку. Сезон открыт, всем НХНЧ!
+              </p>
+              <p class="description-text-black">
+                Сработал Swing Impact 4” в 13 расцветке от Green Fish.
+              </p>
+            </div>
+            <div class="feedback-main-list-item__gallery swiper-container">
+              <!-- Здесь выводятся все слайды относящиеся к текущему отзыву -->
+              <div class="feedback-main-list-item__wrapper swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/feedback/gallery-sample.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/feedback/gallery-sample.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/feedback/gallery-sample.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/feedback/gallery-sample.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="feedback-main-list-item__desc">
+              Отчет с рыбалки от нашего друга, 19 сентября 2020
+            </div>
+          </div>
+          <div class="feedback-main-list-item">
+            <div class="feedback-main-list-item__text">
+              <p class="description-text-black">
+                Первая осенняя рыбалка. Выбор пал на р. Щара, решил проведать места где ловил весной. Доехать было
+                тяжеловато, а ещё тяжелей было продвигаться по берегу, заросло все мама не горюй... За три часа ловли
+                реализовал одну поклевку. Сезон открыт, всем НХНЧ!
+              </p>
+              <p class="description-text-black">
+                Сработал Swing Impact 4” в 13 расцветке от Green Fish.
+              </p>
+            </div>
+            <div class="feedback-main-list-item__gallery swiper-container">
+              <!-- Здесь выводятся все слайды относящиеся к текущему отзыву -->
+              <div class="feedback-main-list-item__wrapper swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/feedback/gallery-sample.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/feedback/gallery-sample.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="feedback-main-list-item__desc">
+              Отчет с рыбалки от нашего друга, 19 сентября 2020
+            </div>
+          </div>
+        </div>
+        <!-- Конец отзывов -->
+        <div class="feedback-main-pagination">
+          <div class="feedback-main-pagination__elem arrow prev disabled">
+            <svg width="9" height="12" viewBox="0 0 9 12" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.15997 1.41L3.57997 6L8.15997 10.59L6.74997 12L0.749973 6L6.74997 0L8.15997 1.41Z"/>
+            </svg>              
+          </div>
+          <div class="feedback-main-pagination__elem active_page">1</div>
+          <div class="feedback-main-pagination__elem">2</div>
+          <div class="feedback-main-pagination__elem dots">...</div>
+          <div class="feedback-main-pagination__elem">9</div>
+          <div class="feedback-main-pagination__elem">10</div>
+          <div class="feedback-main-pagination__elem arrow next">
+            <svg width="9" height="12" viewBox="0 0 9 12" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.839996 1.41L5.42 6L0.839996 10.59L2.25 12L8.25 6L2.25 0L0.839996 1.41Z"/>
+            </svg>              
+          </div>
+        </div>
+      </section>
+      <section class="feedback-add">
+        <div class="review__add-review">
+          <p class="review__add-review-title">Добавить отзыв</p>
+          <div class="review__add-review-container">
+            <p class="description-text-black review__add-review-note">Ваш отзыв или совет поможет другим
+              покупателям принять правильное решение о покупке
+              товара.</p>
+            <div class="full-table-for-review">
+              <label>
+                Имя
+                <input type="text" />
+              </label>
+              <label class="full-table-for-review__email">
+                E-mail
+                <input type="text" />
+              </label>
+              <label class="choose-file">
+                <span class="choose-file-title">Фотографии</span>
+                <input type="file" name="files[]" id="btn-loader" title="" accept=".jpg, .jpeg, .png, .gif" multiple>
+                <span class="choose-file-loader">Загрузить</span>
+              </label>
+              <div class="new-review__donwloaded-files">
+                <p class="choose-file-description">
+                  GIF, JPEG или PNG, размером до 20 Мб
+                </p>
+                <output id="list"></output>
+              </div>
+              <label class="video-review">
+                Текст или ссылка на видеоотзыв
+                <textarea></textarea>
+              </label>
+              <div class="request-agreement">
+                <svg class="closedBtn" width="16" height="12" viewBox="0 0 16 12" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1.845 5.85503C1.57163 5.58166 1.12842 5.58166 0.85505 5.85503C0.581683 6.12839 0.581683 6.57161 0.85505 6.84497L5.05505 11.045C5.32842 11.3183 5.77163 11.3183 6.045 11.045L15.145 1.94497C15.4184 1.67161 15.4184 1.22839 15.145 0.955025C14.8716 0.681658 14.4284 0.681658 14.155 0.955025L5.55002 9.56005L1.845 5.85503Z"
+                    fill="#3CB156" />
+                </svg>
+                <p>принимаю условия <a href="">пользовательского соглашения</a></p>
+              </div>
+            </div>
+            <div class="review__add-review-write-btn">Написать</div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="feedback-gallery-popup">
+      <img class="feedback-gallery-popup__close" src="images/feedback/close-gallery.svg" alt="">
+      <svg class="feedback-gallery-popup__prev" width="81" height="81" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M56.3865 19.2615C57.7045 17.9435 57.7045 15.8065 56.3865 14.4885C55.0685 13.1705 52.9315 13.1705 51.6135 14.4885L27.9885 38.1135C26.6705 39.4315 26.6705 41.5685 27.9885 42.8865L51.6135 66.5115C52.9315 67.8295 55.0685 67.8295 56.3865 66.5115C57.7045 65.1935 57.7045 63.0565 56.3865 61.7385L35.148 40.5L56.3865 19.2615Z" fill="#C4C4C4"/>
+      </svg>
+      <div class="feedback-gallery-popup__slider">
+        <div class="feedback-gallery swiper-container">
+          <div class="swiper-wrapper">
+           <!-- Сюда ничего не выводится, взаимодействие прописано в js -->
+          </div>
+        </div>
+        <div class="feedback-gallery_thumbs swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Сюда ничего не выводится, взаимодействие прописано в js -->
+          </div>
+        </div>
+      </div>
+      <svg class="feedback-gallery-popup__next" width="81" height="81" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24.6136 19.2615C23.2956 17.9435 23.2956 15.8065 24.6136 14.4885C25.9317 13.1705 28.0686 13.1705 29.3866 14.4885L53.0116 38.1135C54.3296 39.4315 54.3296 41.5685 53.0116 42.8865L29.3866 66.5115C28.0686 67.8295 25.9317 67.8295 24.6136 66.5115C23.2956 65.1935 23.2956 63.0565 24.6136 61.7385L45.8522 40.5L24.6136 19.2615Z" fill="#C4C4C4"/>
+      </svg>
+    </div>
+    <section class="instagram">
+      <div class="container">
+        <div class="instagram__text">
+          <h3 class="big-title ">Следите за&nbsp;нами в&nbsp;Инстаграме</h3>
+          <a class="title-small" href="">Посмотреть профиль</a>
+        </div>
+        <div class="instagram__pictures">
+          <a href=""><img alt="" src="images/home-page/inst1.png"></a>
+          <a href=""><img alt="" src="images/home-page/inst2.png"></a>
+          <a href=""><img alt="" src="images/home-page/inst3.png"></a>
+          <a href=""><img alt="" src="images/home-page/inst4.png"></a>
+          <a href=""><img alt="" src="images/home-page/inst4.png"></a>
+          <a href=""><img alt="" src="images/home-page/inst4.png"></a>
+        </div>
+      </div>
+    </section>
+    <div class="props">
+      <div class="props__closed-btn">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M42.5522 5.22029C43.5936 4.17891 43.5937 2.49047 42.5523 1.44905C41.5109 0.407634 39.8225 0.407605 38.781 1.44898L22 18.2295L5.21888 1.44898C4.17746 0.407605 2.48902 0.407634 1.44764 1.44905C0.406262 2.49047 0.406291 4.17891 1.44771 5.22029L18.2287 22.0007L1.44771 38.781C0.406291 39.8224 0.406262 41.5108 1.44764 42.5522C2.48902 43.5937 4.17746 43.5937 5.21888 42.5523L22 25.7718L38.781 42.5523C39.8225 43.5937 41.5109 43.5937 42.5523 42.5522C43.5937 41.5108 43.5936 39.8224 42.5522 38.781L25.7713 22.0007L42.5522 5.22029Z"
+            fill="#C4C4C4" />
+        </svg>
+      </div>
+      <div class="props__container">
+        <div class="props__container__info">
+          <h3>Реквизиты</h3>
+          <p class="props__container__info-text">ИП Лимановский Алексей& Анатольевич,<br />УНП& 391537283 р/с
+            BY21BELB3013000010226000<br /> в ОАО &laquo;Банк БелВЭБ&raquo; БИК: BELNNY2X
+          </p>
+        </div>
+        <div class="props__container-for-btn">
+          <a class="props__container__copy">Скопировать</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__catalog">
+        <h3 class="title-small">Каталог приманок</h3>
+        <a class="description-text-white" href="">Одноцветные</a>
+        <a class="description-text-white" href="">Двухцветные</a>
+        <p class="footer__catalog__phone-number">+375 (29) 899-83-68</p>
+        <a class="footer__catalog__props white">Реквизиты</a>
+      </div>
+      <div class="footer__about-company">
+        <h3 class="title-small">О&nbsp;компании</h3>
+        <a class="description-text-white" href="">Производство</a>
+        <a class="description-text-white" href="">Партнёрам</a>
+        <a class="description-text-white" href="">Контакты</a>
+      </div>
+      <div class="footer__clients">
+        <h3 class="title-small">Покупателям</h3>
+        <a class="description-text-white" href="">Доставка и оплата</a>
+        <a class="description-text-white" href="">Магазины-партнёры</a>
+        <a class="description-text-white" href="">Отзывы</a>
+        <a class="description-text-white" href="">Блог</a>
+        <a class="description-text-white" href="">Пользовательское соглашение</a>
+      </div>
+      <div class="footer__social-networks">
+        <h3 class="title-small">Наши соцсети</h3>
+        <a class="description-text-white" href="">Вконтакте</a>
+        <a class="description-text-white" href="">Инстаграм</a>
+        <p class="description-text-white">greenfishbaits@gmail.com</p>
+      </div>
+      <div class="footer__info">
+        <p class="description-text-white">Сайт разработал &laquo;Чеширский Кот&raquo; на&nbsp;1С-Битрикс</p>
+        <p class="description-text-white">&copy; Green Fish 2020</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/propsPage.js"></script>
+  <script src="js/addReview.js"></script>
+  <script src="js/feedback/feedbackGallery.js"></script>
+</body>
+
+</html>

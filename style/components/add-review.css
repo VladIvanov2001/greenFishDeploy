@@ -1,0 +1,250 @@
+.review__add-review-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.review__add-review-container {
+  border: 1px solid #E8E8E8;
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 429px;
+  padding: 34px 28px 0 30px;
+}
+
+.review__add-review-write-btn {
+  width: 358px;
+  height: 64px;
+  border: 2px solid #3CB156;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #3CB156;
+  margin-left: 6px;
+  margin-bottom: 25px;
+}
+
+.review__add-review-write-btn:hover {
+  background: #CBF1D4;
+  color: #3CB156;
+  cursor: pointer;
+}
+
+.review__add-review {
+  margin-top: 62px;
+}
+
+.review__add-review-note {
+  margin-bottom: 15px;
+}
+
+.full-table-for-review {
+  display: none;
+  flex-direction: column;
+}
+
+.full-table-for-review label {
+  font-family: Typonine Sans Cy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #373F41;
+}
+
+.full-table-for-review input {
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 288px;
+  height: 48px;
+}
+
+.full-table-for-review label:first-child {
+  margin-bottom: 17px;
+}
+
+.full-table-for-review label:first-child input {
+  margin-left: 15px;
+}
+
+.choose-file {
+  display: flex;
+}
+
+.choose-file p {
+  margin-right: 28px;
+}
+
+.choose-file input[type="file"] {
+  display: none;
+}
+
+.choose-file-loader {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 6px 16px;
+  width: 170px;
+  height: 20px;
+  background: #A4ABAC;
+  border-radius: 3px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 24px;
+  justify-content: center;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+
+.full-table-for-review__email {
+  margin-bottom: 26px;
+}
+
+.choose-file-title {
+  display: block;
+  margin-right: 43px;
+}
+
+.choose-file-description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: #C4C4C4;
+  width: 190px;
+  margin-left: 139px;
+  margin-bottom: 8px;
+}
+
+.loaded-files {
+  display: inline;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 24px;
+  color: #373F41;
+  position: relative;
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+.loaded-files:after {
+  content: '';
+  margin: 0 5px 0 0;
+  background-image: url("../images/items-card/cross.svg");
+  background-size: 10px 10px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: -20px;
+  top: 6px;
+  opacity: 0.3;
+}
+
+.loaded-files:hover:after {
+  opacity: 1;
+}
+
+.video-review textarea {
+  width: 366px;
+  height: 148px;
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  resize: none;
+  margin-top: 10px;
+  margin-bottom: 26px;
+}
+
+.new-review__donwloaded-files {
+  margin-bottom: 28px;
+}
+
+.request-agreement {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.request-agreement p {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  color: #A7A8A8;
+  mix-blend-mode: normal;
+}
+
+.request-agreement svg {
+  margin-right: 9px;
+}
+
+@media (max-width: 1199.98px) {
+  .review__add-review {
+    margin-top: 50px;
+  }
+  .review__add-review-note {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .review__add-review-container {
+    padding-top: 24px;
+  }
+  .review__add-review-write-btn {
+    width: 384px;
+    margin-left: 3px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .review__add-review {
+    margin-top: 16px;
+  }
+  .review__add-review-title {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 9px;
+  }
+  .review__add-review-container {
+    width: 332px;
+  }
+  .review__add-review-write-btn {
+    width: 263px;
+    height: 53px;
+    margin-bottom: -13px;
+  }
+  .request-agreement {
+    display: flex;
+    margin-bottom: 21px;
+  }
+  .request-agreement p {
+    font-size: 14px;
+    color: #373F41;
+    line-height: 17px;
+    margin-top: 2px;
+    margin-bottom: -14px;
+    padding-right: 10px;
+  }
+}

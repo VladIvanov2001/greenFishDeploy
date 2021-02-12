@@ -1,0 +1,245 @@
+.request {
+    background-image: url("../../images/catalog/catalog-background.png");
+}
+
+.request h2 {
+    margin-bottom: 10px;
+}
+
+.request-conditionals {
+    width: 48%;
+    margin-bottom: 27px;
+}
+
+.request label {
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: #373F41;
+
+}
+
+.request-contact-info label {
+    flex-direction: row;
+}
+
+.request-name {
+    margin-bottom: 21px;
+}
+
+.request-name input {
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 452px;
+    height: 42px;
+}
+
+
+.request-contact-info {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.request-contact-info label {
+    display: flex;
+    flex-direction: column;
+}
+
+.request-contact-info input {
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 218px;
+    height: 42px;
+}
+
+.request-contact-info-name {
+    margin-right: 16px;
+}
+
+.request-agreement {
+    display: flex;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: #373F41;
+    padding-left: 3px;
+    margin-bottom: 12px;
+}
+
+.request-agreement a {
+    text-decoration: none;
+    color: #3CB156;
+}
+
+.request-agreement svg {
+    margin-right: 8px;
+}
+
+.request-agreement p {
+    margin-top: -3px;
+}
+
+.request-send-btn {
+    width: 332px;
+    height: 64px;
+    background: #3CB156;
+    border: 2px solid #3CB156;
+    box-sizing: border-box;
+    margin-bottom: 168px;
+}
+
+.request-suggestion {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #373F41;
+    margin-bottom: 26px;
+    padding-left: 5px;
+}
+
+.request-email {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 110px;
+    line-height: 52px;
+    letter-spacing: 1.5px;
+    padding-bottom: 18px;
+    color: #373F41;
+}
+
+@media (max-width: 1409.98px) {
+    .request > .container {
+        padding-left: 35px;
+    }
+
+    .request-send-btn {
+        margin-bottom: 63px;
+    }
+
+    .request-email {
+        font-size: 90px;
+        line-height: 52px;
+    }
+
+    .request-suggestion {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .request > .container {
+        padding-left: 9px;
+    }
+
+    .catalog {
+        margin-bottom: 52px !important;
+    }
+
+    .request-conditionals {
+        width: 91%;
+    }
+
+    .request-contact-info {
+        margin-bottom: 33px;
+    }
+
+    .request-agreement {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .request-send-btn {
+        margin-bottom: 41px;
+    }
+
+    .request-suggestion {
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 0;
+        margin-bottom: 12px;
+    }
+
+    .request-email {
+        font-size: 56px;
+        line-height: 52px;
+        letter-spacing: 0.2px;
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .request h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .request > .container {
+        padding-left: 15px;
+    }
+
+    p.request-conditionals {
+        line-height: 19px;
+        margin-bottom: 8px;
+    }
+
+    .request-conditionals-span-optional-string {
+        display: none;
+    }
+
+    .request-contact-info {
+        flex-direction: column;
+    }
+
+    .request-contact-info-name {
+        margin-bottom: 18px;
+
+    }
+
+    .request-name input, .request-contact-info input, .request-contact-info input {
+        width: 330px;
+        height: 42px;
+    }
+
+    .request-contact-info {
+        margin-bottom: 27px;
+    }
+
+    .request-agreement {
+        margin-bottom: 3px;
+    }
+
+    .request-agreement svg {
+        margin-right: 13px;
+    }
+
+    .request-send-btn {
+        margin-bottom: 49px;
+    }
+
+    .request-email {
+        font-size: 26px;
+        line-height: 52px;
+        letter-spacing: 0.2px;
+    }
+
+    .request-suggestion {
+        margin-bottom: -15px;
+    }
+}

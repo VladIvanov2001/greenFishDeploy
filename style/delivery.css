@@ -1,0 +1,107 @@
+* {
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.navigation {
+    padding-bottom: 13px;
+    margin-bottom: 52px;
+}
+
+.navigation-list {
+    position: relative;
+    top: 0;
+    left: -76px;
+}
+
+.buyers {
+    margin-bottom: 66px;
+}
+
+.buyers-main__info-suggestion {
+    max-width: 427px;
+}
+
+.buyers-main__info__shops-text {
+    font-size: 17px;
+}
+
+.shops {
+    margin-bottom: 35px;
+}
+
+.partners-content {
+    padding-left: 0;
+    align-items: center;
+}
+
+.partners-content__info {
+    max-width: 460px;
+}
+
+.partners-content__info h2 {
+    font-size: 42px;
+    line-height: 52px;
+    width: 222px;
+    margin-bottom: 11px;
+}
+
+.partners-content__expecting {
+    max-width: 389px;
+    padding-top: 59px;
+    margin-right: 61px;
+}
+
+.partners-content__contacts__refs {
+    flex-direction: column;
+    align-items: baseline;
+    padding-top: 15px;
+}
+
+.partners-content__phone__refs-icons {
+    padding-left: 14px;
+}
+
+.partners-content__contacts__refs-number {
+    font-size: 37px;
+    line-height: 30px;
+    margin-bottom: 28px;
+    position: relative;
+    top: 6px;
+    left: 6px;
+}
+
+.partners-content__info p {
+    max-width: 461px;
+}
+
+.partners {
+    margin-bottom: 62px;
+}
+
+.footer {
+    padding: 57px 0 31px 0;
+}
+
+.shops-location-title-mobile {
+    display: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #373F41;
+}
+
+@media (max-width: 1409.98px) {
+    .container {
+        max-width: 1110px;
+    }
+}

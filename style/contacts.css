@@ -1,0 +1,516 @@
+* {
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.navigation {
+    padding-bottom: 13px;
+    margin-bottom: 52px;
+}
+
+.navigation-list {
+    position: relative;
+    top: 0;
+    left: -76px;
+}
+
+.contacts-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts h1 {
+    margin-bottom: 17px;
+}
+
+.partners-content__contacts__email-address {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #3CB156;
+}
+
+.partners-content__contacts__refs {
+    margin-top: 20px;
+}
+
+.contacts {
+    margin-bottom: 39px;
+}
+
+.contacts-info {
+    max-width: 563px;
+    margin-top: 4px;
+}
+
+.contacts-info p:first-child {
+    padding-right: 60px;
+}
+
+.contacts-props {
+    margin-right: 166px;
+    margin-top: 4px;
+}
+
+.props__container__info h3 {
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.props__container__info p {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 402px;
+}
+
+.props__container__info h3 {
+    margin-bottom: 7px;
+}
+
+#map {
+    width: 1415px !important;
+    height: 926px !important;
+}
+
+.address {
+    margin-bottom: 84px;
+}
+
+.address h2 {
+    margin-bottom: 23px;
+}
+
+.address p {
+    margin-bottom: 23px;
+}
+
+.ymaps-2-1-78-map {
+    width: 1382px !important;
+    height: 909px !important;
+}
+
+.instagram__text {
+    padding-left: 0;
+}
+
+.instagram__pictures {
+    padding-top: 0;
+}
+
+.footer {
+    padding: 57px 0 31px 0;
+}
+
+
+@media (max-width: 1409.98px) {
+    .container {
+        max-width: 1110px;
+    }
+
+    .nav__menu {
+        margin: 27px 45px 13px 0;
+    }
+
+    .navigation {
+        padding-bottom: 23px;
+        margin-bottom: 54px;
+    }
+
+    .navigation-list li {
+        font-size: 11px;
+        line-height: 14px;
+    }
+
+    .navigation-info {
+        position: relative;
+    }
+
+    .navigation-list {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        position: absolute;
+        margin-left: 14px;
+        top: 0;
+        left: 37%;
+    }
+
+    .navigation-info {
+        right: 119px;
+    }
+
+    .contacts {
+        margin-bottom: 82px;
+    }
+
+    .contacts > .container {
+        padding-left: 30px;
+    }
+
+    .contacts h1 {
+        font-size: 38px;
+        line-height: 44px;
+    }
+
+    .contacts-props {
+        margin-top: 0;
+        margin-right: 104px;
+    }
+
+    .props__container__info p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .contacts-info p:first-child {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .partners-content__contacts__refs {
+        flex-direction: row;
+        margin-bottom: 0;
+    }
+
+    .partners-content__phone__refs-icons {
+        margin-left: -2px;
+        margin-top: 6px;
+    }
+
+    .contacts-info p:first-child {
+        padding-right: 122px;
+    }
+
+    .partners-content__contacts__refs-number {
+        font-size: 38px;
+        line-height: 44px;
+    }
+
+    .partners-content__contacts__email-address {
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .address {
+        margin-bottom: 111px;
+    }
+
+    .address > .container {
+        padding-left: 34px;
+    }
+
+    .address h2 {
+        font-size: 34px;
+        line-height: 40px;
+        letter-spacing: 0.2px;
+    }
+
+    .address p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .ymaps-2-1-78-map, #map {
+        width: 1134px !important;
+        height: 739px !important;
+    }
+
+    .instagram__text {
+        padding-top: 33px;
+        padding-left: 0;
+        margin-right: 18px;
+        position: relative;
+        right: 57px;
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    .instagram__text h3 {
+        font-size: 33px;
+        margin-bottom: 54px;
+    }
+
+    .footer {
+        padding: 61px 0 25px 37px;
+        margin-top: -2px;
+    }
+
+    .footer__catalog__props {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .container {
+        max-width: 691px;
+    }
+
+    .nav {
+        max-width: 691px;
+        padding-left: initial;
+    }
+
+    .header {
+        height: 76px;
+    }
+
+    .nav__logo {
+        margin-left: 1px;
+        margin-top: -12px;
+        left: 0;
+    }
+
+    .nav__menu {
+        margin: -2px 18px 0 16px;
+        padding-left: 67px;
+    }
+
+    .navigation {
+        margin-bottom: 28px;
+        padding-top: 12px;
+    }
+
+    .navigation-list {
+        margin-left: 10px;
+        top: 2px;
+        left: 16%;
+    }
+
+    .navigation-list li {
+        font-size: 11px;
+        line-height: 14px;
+    }
+
+    .contacts {
+        margin-bottom: 59px;
+    }
+
+    .contacts > .container {
+        padding-left: 0;
+    }
+
+    .contacts-props {
+        margin-right: 0;
+    }
+
+    .contacts h1 {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 0;
+    }
+
+    .contacts-info p:first-child {
+        font-size: 16px;
+        line-height: 20px;
+        padding-right: 31px;
+    }
+
+    .partners-content__contacts__refs {
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    .partners-content__phone__refs-icons {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .partners-content__contacts__email-address {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .partners-content__contacts__refs-number {
+        font-size: 32px;
+        line-height: 40px;
+
+    }
+
+    .props__container__info {
+        width: 329px;
+    }
+
+    .props__container__info h3 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .props__container__info p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .address h2 {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 12px;
+    }
+
+    .address p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .address > .container {
+        padding-left: 0;
+    }
+
+    .ymaps-2-1-78-map, #map {
+        width: 730px !important;
+        height: 480px !important;
+    }
+
+    .instagram__text {
+        position: static;
+        margin-right: 0;
+    }
+
+    .address {
+        margin-bottom: 57px;
+    }
+
+    .instagram__text h3 {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 0.2px;
+    }
+
+    .footer {
+        padding: 27px 0 12px 8px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .header {
+        height: 62px;
+        margin-bottom: 0;
+    }
+
+    .nav__basket {
+        margin-left: 58px;
+    }
+
+    .menu__btn {
+        margin-left: -33px;
+    }
+
+    .nav__logo-picture {
+        margin-left: 12px;
+        margin-top: -4px;
+    }
+
+    .navigation {
+        padding-bottom: 12px;
+        margin-bottom: 16px;
+    }
+
+    .navigation-info {
+        right: 30px;
+    }
+
+    .navigation-list {
+        top: -5px;
+        left: 13%;
+    }
+
+    .contacts > .container {
+        padding-left: 15px;
+    }
+
+    .contacts-main {
+        flex-direction: column;
+    }
+
+    .contacts h1 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .contacts-info p:first-child {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .partners-content__contacts__refs {
+        flex-direction: row;
+    }
+
+    .partners-content__phone__refs-icons a > img {
+        width: 24px;
+    }
+
+    .partners-content__contacts__email-address {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 44px;
+    }
+
+    .partners-content__phone__refs-icons a:last-child {
+        margin-right: 0;
+    }
+
+    .partners-content__contacts__refs-number {
+        margin-top: 0;
+        font-size: 22px;
+        line-height: 28px;
+        margin-right: 27px;
+    }
+
+    .contacts {
+        margin-bottom: 0;
+    }
+
+    .address h2{
+        font-size: 18px;
+        line-height: 24px;
+        padding-left: 15px;
+    }
+
+    .address p{
+        font-size: 16px;
+        line-height: 20px;
+        padding-left: 15px;
+    }
+
+    .instagram > .container {
+        padding-left: 0;
+    }
+
+    .instagram__text {
+        padding-top: 15px;
+    }
+
+    .instagram__text h3 {
+        margin-top: 0;
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+
+
+    .ymaps-2-1-78-map, #map{
+        height: 163px!important;
+        max-width: 100%;
+    }
+
+    .footer {
+        margin-top: -27px;
+    }
+
+    .footer__info p:first-child {
+        color: #767C7D;
+    }
+}

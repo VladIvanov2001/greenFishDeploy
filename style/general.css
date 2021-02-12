@@ -1,0 +1,187 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: url("../fonts/SFProDisplay-Regular.ttf");
+}
+
+.title-small{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.salad{
+    color: #CBF1D4;
+}
+
+.white{
+    color: #fff;
+}
+
+.active{
+    color: #fff;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding-bottom: 4px;
+    padding-top: 5px;
+}
+
+.description-text{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.big-title{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #373F41;
+}
+
+.description-text-black{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #373F41;
+}
+
+
+.subtitle-text{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    color: #373F41;
+}
+
+.title-h3{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    color: #373F41;
+}
+
+
+.description-text-white{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/*Styles for yandex map*/
+.info-popular-label{
+    background-color: #6979F8;
+    width: 200px;
+    height: 137px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 5px;
+    border-radius: 1px;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.info-popular-label__top{
+    border-bottom: 1px solid #fff;
+    display: flex;
+    padding-left: 6px;
+    padding-right: 14px;
+}
+
+.info-popular-label__bottom{
+    padding-right: 46px;
+    padding-left: 6px;
+}
+
+.info-popular-label__bottom p{
+    margin-bottom: 1px;
+}
+
+.info-popular-label__bottom a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* styles for catalog*/
+
+.cost-for-card{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #373F41;
+}
+
+.title-h2, .main-title-of-item{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 52px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2px;
+}
+
+@media(max-width: 1409.98px){
+    .title-h2, .main-title-of-item{
+        font-size: 38px;
+        line-height: 44px;
+    }
+    .description-text{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .big-title{
+        font-size: 34px;
+        line-height: 40px;
+        letter-spacing: 2px;
+    }
+}
+
+@media(max-width: 1199.98px){
+    .title-h2, .main-title-of-item{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .subtitle-text{
+        font-size: 13px;
+        line-height: 18px;
+    }
+}
+
+@media(max-width: 767.98px){
+    .title-h2, .main-title-of-item{
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .description-text{
+        font-size: 16px;
+        line-height: 20px;
+    }
+}

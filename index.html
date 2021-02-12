@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/home-page.css">
+    <link rel="stylesheet" href="style/components/header.css">
+    <link rel="stylesheet" href="style/components/footer.css">
+    <link rel="stylesheet" href="style/general.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=fb603679-5ca0-475f-9617-e25c8a33b360"
+            type="text/javascript"></script>
+</head>
+<body>
+<header class="header">
+    <nav class="nav">
+        <div class="nav__logo">
+            <a href="">
+                <div class="nav__logo-picture"></div>
+                <p class="nav__logo__name">силиконовые приманки</p>
+            </a>
+        </div>
+        <ul class="nav__menu">
+            <li class="nav__menu__item title-small active"><a href="">Каталог</a></li>
+            <li class="nav__menu__item title-small salad"><a href="">О компании</a></li>
+            <li class="nav__menu__item title-small salad"><a href="">Партнерам</a></li>
+            <li class="nav__menu__item title-small salad"><a href="">Покупателям</a></li>
+            <li class="nav__menu__item title-small salad"><a href="">Где купить</a></li>
+        </ul>
+        <div class="nav__basket">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M24.1069 2.8418C29.38 2.8418 33.6595 7.1219 33.6595 12.39L35.566 12.3945C37.6785 12.3945 39.4979 14.1035 39.6292 16.2042L41.0635 39.1534C41.195 41.2574 39.5963 42.9631 37.49 42.9631H10.7238C8.61862 42.9631 7.01888 41.2541 7.15018 39.1534L8.58449 16.2042C8.716 14.1002 10.5316 12.3945 12.6477 12.3945H14.5542C14.5542 7.11904 18.8373 2.8418 24.1069 2.8418ZM29.842 12.3936C29.842 9.23123 27.2731 6.66199 24.1104 6.66199C20.95 6.66199 18.3788 9.22965 18.3788 12.3891L29.842 12.3936ZM14.5549 16.2146H12.6484C12.5501 16.2146 12.4044 16.3513 12.3988 16.4416L10.9943 39.141L37.2348 39.1361L35.8164 16.4416C35.8109 16.3547 35.6616 16.2146 35.5667 16.2146H33.6603V20.0357C33.6603 21.0908 32.8049 21.9462 31.7497 21.9462C30.6946 21.9462 29.8392 21.0908 29.8392 20.0357V16.2146H18.376V20.0357C18.376 21.0908 17.5206 21.9462 16.4654 21.9462C15.4103 21.9462 14.5549 21.0908 14.5549 20.0357V16.2146ZM14.5542 33.4108C14.5542 32.3556 15.4122 31.5002 16.4559 31.5002H31.7578C32.8081 31.5002 33.6596 32.3483 33.6596 33.4108C33.6596 34.4659 32.8015 35.3213 31.7578 35.3213H16.4559C15.4056 35.3213 14.5542 34.4733 14.5542 33.4108Z"
+                      fill="#CBF1D4"/>
+            </svg>
+        </div>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox"/>
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <div class="menu__box">
+                <ul class="menu__box__list">
+                    <li class="title-small"><a class="menu__item" href="#">Каталог</a></li>
+                    <li class="title-small"><a class="menu__item" href="#">О компании</a></li>
+                    <li class="title-small"><a class="menu__item" href="#">Партнерам</a></li>
+                    <li class="title-small"><a class="menu__item" href="#">Покупателям</a></li>
+                    <li class="title-small"><a class="menu__item" href="#">Где купить</a></li>
+                    <li class="description-text-white"><a class="menu__item" href="#">Доставка и оплата</a></li>
+                    <li class="description-text-white"><a class="menu__item" href="#">Магазины-партнёры</a></li>
+                    <li class="description-text-white"><a class="menu__item" href="#">Отзывы</a></li>
+                    <li class="description-text-white"><a class="menu__item" href="#">Блог</a></li>
+                    <li class="description-text-white"><a class="menu__item" href="#">Пользовательское соглашение</a>
+                    </li>
+                    <li>
+                        <div class="menu__box__basket">
+                            <svg width="52" height="48" viewBox="0 0 52 48" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M22.1906 8C26.8778 8 30.6819 11.8045 30.6819 16.4873L32.3765 16.4913C34.2544 16.4913 35.8716 18.0104 35.9883 19.8777L37.2632 40.277C37.3801 42.1472 35.959 43.6634 34.0867 43.6634H10.2945C8.42331 43.6634 7.00132 42.1443 7.11803 40.277L8.39298 19.8777C8.50987 18.0074 10.1237 16.4913 12.0047 16.4913H13.6994C13.6994 11.802 17.5066 8 22.1906 8ZM27.2885 16.4906C27.2885 13.6796 25.005 11.3958 22.1937 11.3958C19.3844 11.3958 17.099 13.6782 17.099 16.4866L27.2885 16.4906ZM13.6997 19.8869H12.005C11.9177 19.8869 11.7882 20.0084 11.7831 20.0887L10.5347 40.266L33.8596 40.2616L32.5988 20.0887C32.5939 20.0115 32.4612 19.8869 32.3769 19.8869H30.6822V23.2834C30.6822 24.2214 29.9219 24.9817 28.984 24.9817C28.0461 24.9817 27.2857 24.2214 27.2857 23.2834V19.8869H17.0962V23.2834C17.0962 24.2214 16.3358 24.9817 15.3979 24.9817C14.46 24.9817 13.6997 24.2214 13.6997 23.2834V19.8869ZM13.6997 35.1724C13.6997 34.2345 14.4623 33.4742 15.3901 33.4742H28.9918C29.9254 33.4742 30.6822 34.228 30.6822 35.1724C30.6822 36.1104 29.9195 36.8707 28.9918 36.8707H15.3901C14.4565 36.8707 13.6997 36.1169 13.6997 35.1724Z"
+                                      fill="#A4ABAC"/>
+                            </svg>
+                            <p class="white">Корзина пуста</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+</header>
+<main>
+    <section class="slider">
+        <div class="swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide__prev">
+                        <div class="slider__content">
+                            <div class="slider__content__image">
+                                <img alt="" src="images/home-page/main-picture-slider.png">
+                            </div>
+                            <div class="slider__content__info">
+                                <div class="slider__content__info-container">
+                                    <h2 class="slider__content__info-title">1Заголовок-описание события</h2>
+                                    <p class="description-text white slider__content__info-description">Текст с кратким
+                                        описанием инфоповода должен «расшифровывать» заголовок и мотивировать
+                                        прочесть подробней на отдельной странице.
+                                    </p>
+                                    <a href="" class="slider__content__info-btn">Посмотреть в каталоге</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide__curr">
+                        <div class="slider__content">
+                            <div class="slider__content__image">
+                                <img alt="" src="images/home-page/main-picture-slider.png">
+                            </div>
+                            <div class="slider__content__info">
+                                <div class="slider__content__info-container">
+                                    <h2 class="slider__content__info-title">2Заголовок-описание события</h2>
+                                    <p class="description-text white slider__content__info-description">Текст с кратким
+                                        описанием инфоповода должен «расшифровывать» заголовок и мотивировать
+                                        прочесть подробней на отдельной странице.
+                                    </p>
+                                    <a href="" class="slider__content__info-btn">Посмотреть в каталоге</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide__next">
+                        <div class="slider__content">
+                            <div class="slider__content__image">
+                                <img alt="" src="images/home-page/main-picture-slider.png">
+                            </div>
+                            <div class="slider__content__info">
+                                <div class="slider__content__info-container">
+                                    <h2 class="slider__content__info-title">3Заголовок-описание события</h2>
+                                    <p class="description-text white slider__content__info-description">Текст с кратким
+                                        описанием инфоповода должен «расшифровывать» заголовок и мотивировать
+                                        прочесть подробней на отдельной странице.
+                                    </p>
+                                    <a href="" class="slider__content__info-btn">Посмотреть в каталоге</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev">
+                    <div class="preview">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+    <section class="company-info">
+        <div class="company-info-background">
+            <div class="company-info__logo"></div>
+            <article class="company-info__text">
+                <h1 class="big-title">Белорусский бренд силиконовых приманок</h1>
+                <p class="description-text-black">Каждую модель и расцветку мы тестируем в реальных условиях, поэтому в
+                    продажу попадают только самые
+                    уловистые экземпляры.</p>
+                <p class="description-text-black">Эффективность приманок подтверждают отзывы и обзоры рыболовов, которые
+                    уже опробовали Green Fish в
+                    деле.</p>
+            </article>
+        </div>
+    </section>
+    <section class="production">
+        <div class="container">
+            <article class="production__info">
+                <div class="production__info__text">
+                    <h2 class="big-title">О производстве</h2>
+                    <p class="description-text-black production__info-text">Создаём приманки с&nbsp;эффективной формулой
+                        резины и&nbsp;максимальной
+                        уловистостью на&nbsp;самых сложных участках белорусских водоёмов.</p>
+                    <p class="description-text-black production__info-text">Достойных результатов достигаем благодаря
+                        сотрудничеству наших
+                        технологов с&nbsp;экспертами и&nbsp;профессиональными</br>рыбаками-спортсменами.</p>
+                </div>
+                <div class="production__info__index">
+                    <div class="production__info__index-product">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M23.2209 2.00188C18.8065 1.93724 15.456 3.54311 13.2212 5.79893C12.2058 6.82393 11.4481 8.18647 11.4152 9.72981C11.3681 11.933 12.8252 13.8378 15.7523 15.2478C16.9147 15.8078 17.9993 16.393 18.9896 16.9894C19.5 17.2969 22.5 19.4136 22.5 19.4136C22.5 19.4136 23.6087 20.0085 24.792 22.0639C25.1751 22.7294 25.3471 23.3515 25.2779 23.9046C24.9885 26.2172 23.048 27.3748 21.0485 26.7013C20.3271 26.4584 19.8368 25.9772 19.5 25.2717C19.3108 24.8753 19.1843 24.4335 19.1136 23.9888C19.0719 23.7258 19.0531 23.3164 19.0531 23.3164C18.9793 22.439 18.6392 21.7004 17.5935 21.5066C16.5852 21.3197 16.0158 21.8492 15.6192 22.6068L13.2212 25.8924L9.82497 27.5229C8.351 27.9289 7.71006 29.6035 8.60205 30.9025C8.60205 30.9025 9.2373 31.9405 10.0591 32.6357C11.6235 33.9593 13.73 34.6353 16.3513 34.3704C16.6531 34.5678 17.0038 34.8287 17.9316 35.1619C18.8238 35.4822 20.4635 36 23.3109 36C26.1583 36 30.1135 35.0553 33.4279 32.5464C37.5811 29.4025 40 24.5591 40 18.2508C40 8.96448 31.6525 1.93027 23.2209 2.00188ZM28.1266 24.2901C28.6799 19.9913 23.8482 15.7726 16.5256 12.3434C14.5899 11.437 13.9305 10.599 13.9473 9.83314C13.9594 9.28515 14.8341 8.13759 14.8341 8.13759C22.5578 3.68031 38.9742 14.9665 35.383 24.8967C34.456 26.9291 33.0669 28.5954 31.2907 29.9025C28.5353 31.9302 25.5285 32.7095 23.0046 32.7095C20.4807 32.7095 19.5554 32.4611 18.5465 32.0897C17.5545 31.7245 16.9267 31.1447 16.5256 30.9563C16.1244 30.7679 13.9473 31.8286 11.484 30.1806C11.9305 30.0993 13.4604 29.461 13.9473 29.0895C14.4343 28.718 15.994 27.5962 16.2607 27.1008C16.7495 28.1112 17.8935 29.1963 19.5288 29.7318C23.4818 31.026 27.5643 28.6586 28.1266 24.2901Z"
+                                  fill="#3CB156"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M6.60068 43.4097C5.4563 42.2578 5.02508 42.0001 4 42.0001C2.89543 42.0001 2 41.1046 2 40.0001C2 38.8955 2.89543 38.0001 4 38.0001C6.35375 38.0001 7.6117 38.7519 9.45732 40.6096C10.5889 41.7485 11.0082 42.0001 12 42.0001C13.001 42.0001 13.4274 41.7442 14.5858 40.5858C16.4274 38.7442 17.6677 38.0001 20 38.0001C22.3201 38.0001 23.5642 38.7447 25.3675 40.562L25.3966 40.5913C26.5345 41.7379 26.9697 41.9977 28.0046 42.0001C29.0303 42.0024 29.4515 41.7496 30.5978 40.5839C32.4093 38.742 33.6578 37.9915 36.0073 38.0001C38.3481 38.0086 39.599 38.7575 41.4403 40.6056C42.5779 41.7475 43.0001 42.0001 44 42.0001C45.1046 42.0001 46 42.8955 46 44.0001C46 45.1046 45.1046 46.0001 44 46.0001C41.671 46.0001 40.4267 45.2557 38.5895 43.4116C37.4444 42.2623 37.0126 42.0038 35.9927 42C34.9878 41.9964 34.5749 42.2445 33.4362 43.4024C31.6186 45.2506 30.3613 46.0055 27.9954 46.0001C25.6387 45.9946 24.375 45.2405 22.5574 43.4088L22.5283 43.3795C21.4074 42.25 20.9899 42.0001 20 42.0001C18.999 42.0001 18.5726 42.2559 17.4142 43.4143C15.5726 45.2559 14.3323 46.0001 12 46.0001C9.67621 46.0001 8.43404 45.255 6.60068 43.4097Z"
+                                  fill="#3CB156"/>
+                        </svg>
+                        <p class="">34&nbsp;модели приманок
+                            различных форм
+                            в&nbsp;размерах от&nbsp;1&Prime; до&nbsp;4,5&Prime;</p>
+                    </div>
+                    <div class="production__info__index-color">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M40.3813 19.754L26.2461 5.61883C25.4627 4.83541 24.1947 4.83483 23.413 5.61656L3.61644 25.4131C2.8298 26.1997 2.83573 27.4633 3.61871 28.2462L17.7538 42.3814C18.5373 43.1648 19.8053 43.1654 20.587 42.3836L40.3835 22.5871C41.1702 21.8005 41.1642 20.5369 40.3813 19.754ZM19.1719 38.1426L7.85785 26.8285L24.8284 9.85797L36.147 21.1765L19.1719 38.1426ZM16.6339 21.9978H30.5786C31.6853 21.9978 31.9358 22.6297 31.1502 23.4093L19.8741 34.5988C19.4808 34.989 18.8462 34.9885 18.456 34.5983L11.4112 27.5534C11.0258 27.1681 11.0249 26.5311 11.42 26.1417L14.9091 22.7029C15.3017 22.3159 16.0764 21.9978 16.6339 21.9978ZM37 33.9895C37 36.1986 38.7908 37.9895 41 37.9895C43.2091 37.9895 45 36.1986 45 33.9895C45 31.7804 41.9479 26.4145 41.9479 26.4145C41.4244 25.4434 40.5719 25.4371 40.052 26.4145C40.052 26.4145 37 31.7804 37 33.9895Z"
+                                  fill="#3CB156"/>
+                        </svg>
+                        <p class="subtitle-text">20 вариантов
+                            цветовых
+                            исполнений</p>
+                    </div>
+                </div>
+            </article>
+            <div class="production__photo"></div>
+        </div>
+    </section>
+    <section class="popular-models">
+        <div class="container">
+            <h2 class="big-title popular-models-title">Популярные модели</h2>
+            <article class="popular-models__info">
+                <a href="" class="popular-models__info__item"><img alt="GF Easy Shiner 4”"
+                                                                   src="images/home-page/gfeasyshiner4.png"/>
+                    <p class="popular-models__info__item-name">GF Easy Shiner 4”</p>
+                </a>
+                <a href="" class="popular-models__info__item"><img alt="GF Swing Impact 4”"
+                                                                   src="images/home-page/gf-swing-impact4.png">
+                    <p class="popular-models__info__item-name">GF Swing Impact 4”</p>
+                </a>
+                <a href="" class="popular-models__info__item"><img alt="Gf Awaruna 3,5”"
+                                                                   src="images/home-page/gf-awaruna.png">
+                    <p class="popular-models__info__item-name">Gf Awaruna 3,5”</p>
+                </a>
+                <a href="" class="popular-models__info__item"><img alt="GF Swing Impact Fat 3,3”"
+                                                                   src="images/home-page/gf-swing-fat.png">
+                    <p class="popular-models__info__item-name">GF Swing Impact Fat 3,3”</p>
+                </a>
+                <a href="" class="popular-models__info__item more"><img alt="GF Nimble 3,5”"
+                                                                        src="images/home-page/gf-nimble.png">
+                    <p class="popular-models__info__item-name">GF Nimble 3,5”</p>
+                </a>
+                <a href="" class="popular-models__info__item more"><img alt="GF Tanta 1,5”"
+                                                                        src="images/home-page/gf-tanta.png">
+                    <p class="popular-models__info__item-name">GF Tanta 1,5”</p>
+                </a>
+                <a href="" class="popular-models__info__item more"><img alt="GF Sexy Impact 2,8”"
+                                                                        src="images/home-page/gf-sexy.png">
+                    <p class="popular-models__info__item-name">GF Sexy Impact 2,8”</p>
+                </a>
+                <a href="" class="popular-models__info__item more"><img alt="GF Saturn 2”"
+                                                                        src="images/home-page/gf-saturn.png">
+                    <p class="popular-models__info__item-name">GF Saturn 2” </p></a>
+                <a href="" class="popular-models__info__item more"><img alt="GF Javastick 2”"
+                                                                        src="images/home-page/gf-javastick.png">
+                    <p class="popular-models__info__item-name">GF Javastick 2”</p>
+                </a>
+            </article>
+            <a class="popular-models__info__show-more">Показать ещё</a>
+            <a href="" class="popular-models__check title-small">Посмотреть каталог</a>
+        </div>
+    </section>
+    <section class="advantages">
+        <div class="container">
+            <h2 class="big-title advantages-title">Преимущества</h2>
+            <p class="description-text advantages-description">Благодаря оптимальному балансу мягкости и&nbsp;жёсткости
+                приманки показывают
+                живую игру и&nbsp;не ломаются
+                при сильном течении или ударах о&nbsp;дно водоёма. Доступная цена позволяет собрать целую коллекцию
+                моделей
+                для разных условий рыбалки.</p>
+            <article class="advantages__details">
+                <div class="advantages__details__item">
+                    <img alt="wallet" src="images/home-page/wallet.svg">
+                    <h3 class="title-h3">Доступная цена</h3>
+                    <p class="description-text-black">Стоят дешевле зарубежных аналогов, при этом не&nbsp;уступают им&nbsp;по
+                        качеству.</p>
+                </div>
+                <div class="advantages__details__item">
+                    <img alt="silicone" src="images/home-page/silicone.svg">
+                    <h3 class="title-h3">Прочный силикон</h3>
+                    <p class="description-text-black">Надёжный материал выдерживает не одну поклёвку самого настойчивого
+                        соперника.</p>
+                </div>
+                <div class="advantages__details__item">
+                    <img alt="beaker" src="images/home-page/beaker.svg">
+                    <h3 class="title-h3">Фирменный аттрактант</h3>
+                    <p class="description-text-black">Сильный аромат привлекает внимание рыбы на дальних
+                        расстояниях.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="news">
+        <h2 class="big-title">Новости и отчеты рыболовов</h2>
+        <div class="container">
+            <article class="news-content">
+                <a class="news-content__left-side" href="">
+                    <div class="news-content__left-side__info">
+                        <h3 class="title-h3">Заголовок</h3>
+                        <p class="description-text-black">Описание события в компании, изменения в продукте или о новом
+                            партнёре бизнеса. </p>
+                        <p class="subtitle-text">12.08.2020</p>
+                        <span class="subtitle-text news__item-tag">#НХНЧ</span>
+                        <span class="subtitle-text news__item-tag">#ПРИМАНКИ</span>
+                    </div>
+                </a>
+                <div class="news__right-side">
+                    <a class="news__right-side__item" href="">
+                        <div class="news__right-side__item-info">
+                            <h3 class="title-h3">Заголовок</h3>
+                            <p class="description-text-black">Описание события в компании, изменения в продукте или о
+                                новом партнёре бизнеса. </p>
+                            <p class="subtitle-text">12.08.2020</p>
+                            <span class="subtitle-text news__item-tag">#рыбалкавбеларуси</span>
+                        </div>
+                        <div class="news__right-side__item-image"></div>
+                    </a>
+                    <a class="news__right-side__item" href="">
+                        <div class="news__right-side__item-info">
+                            <h3 class="title-h3">Заголовок</h3>
+                            <p class="description-text-black">Описание события в компании, изменения в продукте или о
+                                новом партнёре бизнеса. </p>
+                            <p class="subtitle-text">12.08.2020</p>
+                            <span class="subtitle-text news__item-tag">#рыбалкавбеларуси</span>
+                        </div>
+                        <div class="news__right-side__item-image"></div>
+                    </a>
+                </div>
+            </article>
+            <div class="swiper-container-for-tablet">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide for-tablet">
+                        <a class="news__right-side__item" href="">
+                            <div class="news__right-side__item-info">
+                                <h3 class="title-h3">Заголовок</h3>
+                                <p class="description-text-black">Описание события в компании, изменения в продукте или
+                                    о
+                                    новом партнёре бизнеса. </p>
+                                <p class="subtitle-text">12.08.2020</p>
+                                <span class="subtitle-text news__item-tag">#рыбалкавбеларуси</span>
+                            </div>
+                            <div class="news__right-side__item-image"></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide for-tablet">
+                        <a class="news__right-side__item" href="">
+                            <div class="news__right-side__item-info">
+                                <h3 class="title-h3">Заголовок</h3>
+                                <p class="description-text-black">Описание события в компании, изменения в продукте или
+                                    о
+                                    новом партнёре бизнеса. </p>
+                                <p class="subtitle-text">12.08.2020</p>
+                                <span class="subtitle-text news__item-tag">#рыбалкавбеларуси</span>
+                            </div>
+                            <div class="news__right-side__item-image"></div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide for-tablet">
+                        <a class="news__right-side__item" href="">
+                            <div class="news__right-side__item-info">
+                                <h3 class="title-h3">Заголовок</h3>
+                                <p class="description-text-black">Описание события в компании, изменения в продукте или
+                                    о
+                                    новом партнёре бизнеса. </p>
+                                <p class="subtitle-text">12.08.2020</p>
+                                <span class="subtitle-text news__item-tag">#рыбалкавбеларуси</span>
+                            </div>
+                            <div class="news__right-side__item-image"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="partners">
+        <div class="container">
+            <div class="partners-content">
+                <article class="partners-content__info">
+                    <h2 class="big-title">Партнёрам</h2>
+                    <p class="description-text">Работаем с оптовыми заказчиками и дилерскими&nbsp;магазинами на выгодных&nbsp;условиях.
+                        Заключаем&nbsp;договор на сотрудничество.</p>
+                    <p class="description-text">Предлагаем партнёрскую скидку от&nbsp;5% до&nbsp;20% и быстро
+                        выполненяем заказы. Оптовая партия&nbsp;&mdash; от&nbsp;100&nbsp;упаковок.</p>
+                </article>
+                <article class="partners-content__contacts">
+                    <div class="partners-content__contacts__refs">
+                        <a href="tel:+375 (29) 899-83-68" class="partners-content__contacts__refs-number">+375 (29)
+                            899-83-68</a>
+                        <div class="partners-content__phone__refs-icons">
+                            <a href="">
+                                <img src="images/home-page/viber.svg" alt="viber"/>
+                            </a>
+                            <a href="">
+                                <img src="images/home-page/telegram.svg" alt="telegram"/>
+                            </a>
+                            <a href="">
+                                <img src="images/home-page/whatsup.svg" alt="whatsup"/>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="description-text-black partners-content__contacts__refs-description">Ответим на все
+                        интересующие вопросы, предложим лучшие условия для сотрудичества</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="delivery">
+        <div class="delivery__info">
+            <div class="container">
+                <h2>Магазины-партнёры</h2>
+                <p class="description-text white">Адреса точек продаж с которыми мы уже сотрудничаем. Здесь можно купить
+                    приманки Green Fish без
+                    предварительного заказа.</p>
+            </div>
+        </div>
+        <div id="map" style="width:100%;height:861px"></div>
+    </section>
+    <section class="instagram">
+        <div class="container">
+            <div class="instagram__text">
+                <h3 class="big-title ">Следите за&nbsp;нами в&nbsp;Инстаграме</h3>
+                <a class="title-small" href="">Посмотреть профиль</a>
+            </div>
+            <div class="instagram__pictures">
+                <a href=""><img alt="" src="images/home-page/inst1.png"/></a>
+                <a href=""><img alt="" src="images/home-page/inst2.png"/></a>
+                <a href=""><img alt="" src="images/home-page/inst3.png"/></a>
+                <a href=""><img alt="" src="images/home-page/inst4.png"/></a>
+                <a href=""><img alt="" src="images/home-page/inst4.png"/></a>
+                <a href=""><img alt="" src="images/home-page/inst4.png"/></a>
+            </div>
+        </div>
+    </section>
+    <div class="props">
+        <div class="props__closed-btn">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M42.5522 5.22029C43.5936 4.17891 43.5937 2.49047 42.5523 1.44905C41.5109 0.407634 39.8225 0.407605 38.781 1.44898L22 18.2295L5.21888 1.44898C4.17746 0.407605 2.48902 0.407634 1.44764 1.44905C0.406262 2.49047 0.406291 4.17891 1.44771 5.22029L18.2287 22.0007L1.44771 38.781C0.406291 39.8224 0.406262 41.5108 1.44764 42.5522C2.48902 43.5937 4.17746 43.5937 5.21888 42.5523L22 25.7718L38.781 42.5523C39.8225 43.5937 41.5109 43.5937 42.5523 42.5522C43.5937 41.5108 43.5936 39.8224 42.5522 38.781L25.7713 22.0007L42.5522 5.22029Z"
+                      fill="#C4C4C4"/>
+            </svg>
+        </div>
+        <div class="props__container">
+            <div class="props__container__info">
+                <h3>Реквизиты</h3>
+                <p class="props__container__info-text">ИП Лимановский Алексей& Анатольевич,<br/>УНП& 391537283 р/с
+                    BY21BELB3013000010226000<br/> в ОАО &laquo;Банк БелВЭБ&raquo; БИК: BELNNY2X
+                </p>
+            </div>
+            <div class="props__container-for-btn">
+                <a class="props__container__copy">Скопировать</a>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__catalog">
+            <h3 class="title-small">Каталог приманок</h3>
+            <a class="description-text-white" href="">Одноцветные</a>
+            <a class="description-text-white" href="">Двухцветные</a>
+            <p class="footer__catalog__phone-number">+375 (29) 899-83-68</p>
+            <a class="footer__catalog__props white">Реквизиты</a>
+        </div>
+        <div class="footer__about-company">
+            <h3 class="title-small">О&nbsp;компании</h3>
+            <a class="description-text-white" href="">Производство</a>
+            <a class="description-text-white" href="">Партнёрам</a>
+            <a class="description-text-white" href="">Контакты</a>
+        </div>
+        <div class="footer__clients">
+            <h3 class="title-small">Покупателям</h3>
+            <a class="description-text-white" href="">Доставка и оплата</a>
+            <a class="description-text-white" href="">Магазины-партнёры</a>
+            <a class="description-text-white" href="">Отзывы</a>
+            <a class="description-text-white" href="">Блог</a>
+            <a class="description-text-white" href="">Пользовательское соглашение</a>
+        </div>
+        <div class="footer__social-networks">
+            <h3 class="title-small">Наши соцсети</h3>
+            <a class="description-text-white" href="">Вконтакте</a>
+            <a class="description-text-white" href="">Инстаграм</a>
+            <p class="description-text-white">greenfishbaits@gmail.com</p>
+        </div>
+        <div class="footer__info">
+            <p class="description-text-white">Сайт разработал &laquo;Чеширский Кот&raquo; на&nbsp;1С-Битрикс</p>
+            <p class="description-text-white">&copy; Green Fish 2020</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/home-page/scriptForMain.js"></script>
+<script src="js/propsPage.js"></script>
+<script src="js/home-page/sliderHomePageTablet.js"></script>
+<script src="js/home-page/sliderHomePage.js"></script>
+<script src="js/home-page/yandexMap.js"></script>
+</body>
+</html>

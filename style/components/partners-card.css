@@ -1,0 +1,216 @@
+.partners-content {
+    display: flex;
+    padding-left: 30px;
+    justify-content: space-between;
+}
+
+.partners-content__info {
+    width: 610px;
+}
+
+.partners-content__info h2 {
+    width: 194px;
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+    margin-bottom: 30px;
+}
+
+.partners-content__info p:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.partners-content__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 578px;
+}
+
+.partners-content__contacts__refs {
+    display: flex;
+    margin-top: 58px;
+    padding-top: 12px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.partners-content__contacts__refs-number {
+    text-decoration: none;
+    pointer-events: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 52px;
+    letter-spacing: 0.2px;
+    margin-right: 37px;
+    color: #373F41;
+}
+
+.partners-content__phone__refs-icons a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.partners-content__contacts__refs-description {
+    width: 456px;
+}
+
+.partners {
+    margin-bottom: 100px;
+}
+
+@media (max-width: 1409.98px) {
+    .partners {
+        margin-bottom: 56px;
+    }
+
+    .partners-content {
+        padding-left: 25px;
+
+    }
+
+    .partners-content__info {
+        width: 576px;
+    }
+
+    .partners-content__info {
+        width: 542px;
+    }
+
+    .partners-content__contacts {
+        width: 429px;
+    }
+
+    .partners-content__info h2 {
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .partners-content__info p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .partners-content__info p:nth-child(2) {
+        margin-bottom: 26px;
+    }
+
+    .partners-content__contacts__refs {
+        flex-direction: column;
+        align-items: end;
+        margin-bottom: 8px;
+    }
+
+    .partners-content__contacts__refs-number {
+        margin-bottom: 8px;
+    }
+
+    .partners-content__phone__refs-icons {
+        margin-left: 8px;
+    }
+
+    p.partners-content__contacts__refs-description {
+        margin-left: 8px;
+        font-size: 15px;
+        line-height: 20px;
+        width: auto;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .partners-content {
+        padding-left: 0;
+        flex-direction: column;
+    }
+
+    .partners-content__info h2 {
+        width: 133px;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 16px;
+    }
+
+    .partners-content__info p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .partners-content__contacts__refs {
+        flex-direction: row;
+    }
+
+    .partners-content__contacts__refs-number {
+        pointer-events: auto;
+    }
+
+    .partners-content__info {
+        width: 665px;
+    }
+
+    .partners-content__info p:nth-child(2) {
+        margin-bottom: 15px;
+    }
+
+    .partners-content__contacts {
+        width: auto;
+    }
+
+    .partners-content__contacts__refs {
+        margin-top: 40px;
+        padding-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .partners-content__phone__refs-icons {
+        padding-top: 10px;
+    }
+
+    p.partners-content__contacts__refs-description {
+        font-size: 15px;
+        line-height: 20px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .partners-content {
+        padding-left: 15px;
+    }
+
+    .partners-content__info {
+        width: auto;
+    }
+
+    .partners-content__info h2 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .partners-content__info p {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .partners-content__contacts__refs {
+        margin-top: 0;
+        flex-direction: column;
+    }
+
+    .partners-content__contacts__refs-number {
+        font-size: 34px;
+        line-height: 28px;
+        margin-right: 0;
+        margin-top: 53px;
+        pointer-events: auto;
+    }
+
+    .partners-content__phone__refs-icons {
+        margin-left: 2px;
+    }
+
+    p.partners-content__contacts__refs-description {
+        font-size: 14px;
+        line-height: 19px;
+    }
+}

@@ -1,0 +1,196 @@
+.buyers {
+    margin-bottom: 115px;
+}
+
+.buyers-main__info__shops-count {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 62px;
+    line-height: 52px;
+    letter-spacing: 0.2px;
+}
+
+.buyers-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buyers-main__pictures {
+    display: flex;
+}
+
+.buyers-main__info h1 {
+    margin-bottom: 20px;
+}
+
+.buyers-main__info-suggestion {
+    max-width: 385px;
+    margin-bottom: 150px;
+}
+
+.buyers-main__info__shops {
+    display: flex;
+    border-bottom: 1px solid #767C7D;
+    padding-right: 140px;
+    padding-bottom: 7px;
+}
+
+.buyers-main__info__shops-text {
+    max-width: 210px;
+    margin-left: 10px;
+}
+
+@media (max-width: 1409.98px) {
+    .container {
+        max-width: 1110px;
+    }
+
+    .buyers {
+        margin-bottom: 51px;
+    }
+
+    .buyers-main__info {
+        margin-left: 13px;
+    }
+
+    .buyers-main__info h1 {
+        font-size: 38px;
+        line-height: 44px;
+        margin-bottom: 7px;
+    }
+
+    .buyers-main__info .buyers-main__info-suggestion {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .buyers-main__pictures img {
+        max-width: 367px;
+        max-height: 367px;
+    }
+
+    .buyers-main__info__shops {
+        padding-right: 101px;
+    }
+
+    .buyers-main__info__shops .buyers-main__info__shops-text {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .buyers-main__info-suggestion {
+        margin-bottom: 161px;
+    }
+
+    .buyers-main__pictures {
+        margin-right: -17px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .buyers {
+        margin-bottom: 64px;
+    }
+
+    .buyers-main__info h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .buyers-main__info {
+        margin-left: 0;
+        margin-right: 36px;
+    }
+
+    .buyers-main__info .buyers-main__info-suggestion {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 146px;
+    }
+
+    .buyers-main__pictures img {
+        max-width: 330px;
+        max-height: 330px;
+        margin-right: 20px;
+    }
+
+    .buyers-main__info h1 {
+        margin-bottom: 12px;
+    }
+
+    .buyers-main__pictures img:first-child {
+        display: none;
+    }
+
+    .buyers-main__info__shops {
+        padding-right: 86px;
+    }
+
+    .buyers-main__info__shops-count {
+        font-size: 56px;
+    }
+
+    .buyers-main__info__shops .buyers-main__info__shops-text {
+        font-size: 16px;
+        line-height: 20px;
+        max-width: 167px;
+        margin-left: 3px;
+        margin-top: 4px;
+    }
+
+    .buyers-main__info-suggestion {
+        margin-bottom: 170px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .buyers {
+        margin-bottom: 36px;
+    }
+
+    .buyers-main {
+        justify-content: initial;
+        flex-direction: column;
+    }
+
+    .buyers-main__pictures {
+        margin-right: 0;
+    }
+
+    .buyers-main__info h1 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .buyers-main__info .buyers-main__info-suggestion {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .buyers-main__info {
+        margin-right: 0;
+    }
+
+    .buyers-main__info .buyers-main__info-suggestion {
+        margin-bottom: 15px;
+    }
+
+    .buyers-main__info__shops {
+        width: fit-content;
+    }
+
+    .buyers-main__info__shops-count {
+        font-size: 50px;
+    }
+
+    .buyers-main__info__shops .buyers-main__info__shops-text {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .buyers-main__info__shops .buyers-main__info__shops-text {
+        max-width: 154px;
+        margin-left: 9px;
+    }
+}

@@ -1,0 +1,263 @@
+.shops {
+    margin-bottom: 136px;
+}
+
+.shops-location {
+    display: flex;
+}
+
+#map {
+    height: 772px;
+    width: 890px;
+    margin-right: -9px;
+}
+
+.ymaps-2-1-78-map {
+    height: 772px !important;
+    width: 890px !important;
+}
+
+.shops-location__list {
+    margin-top: -10px;
+    margin-left: 37px;
+}
+
+.shops-location__list h2 {
+    margin-bottom: 15px;
+}
+
+.shops-location__list-options {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 13px;
+}
+
+.shops-location__list-options span {
+    margin-bottom: 9px;
+}
+
+.shops-location__list-options select {
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 316px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 24px;
+    padding-left: 18px;
+}
+
+.shops-location__list__item {
+    border: 1px solid #E8E8E8;
+    padding: 29px 29px 14px 18px;
+}
+
+.shops-location__list__item-top {
+    color: #A7A8A8;
+    display: flex;
+    margin-bottom: 14px;
+}
+
+.shops-location__list__item-top svg {
+    margin-right: 8px;
+}
+
+.shops-location__list__item-address {
+    display: flex;
+    margin-bottom: 13px;
+}
+
+.shops-location__list__item a {
+    text-decoration: none;
+    color: #A7A8A8;
+}
+
+.shops-location__list__item:hover {
+    cursor: pointer;
+    border-color: #6979F8;
+}
+
+.shops-location__list__item-choose {
+    color: #fff;
+}
+
+.shops-location__list__item:hover .shops-location__list__item-choose {
+    color: #6979F8;
+}
+
+.shops-location__list__item:hover .shops-location__list__item-top > svg > path {
+    fill: #6979F8
+}
+
+.shops-location__list-shop {
+    height: 645px;
+    overflow-y: scroll
+}
+
+.shops-location-title-mobile {
+    display: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #373F41;
+}
+
+@media (max-width: 1409.98px) {
+    .shops {
+        margin-bottom: 85px;
+    }
+
+    #map {
+        width: 652px;
+        height: 688px;
+    }
+
+    .ymaps-2-1-78-map {
+        width: 652px !important;
+        height: 688px !important;
+    }
+
+    .shops-location__list h2 {
+        margin-top: 9px;
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .shops-location__list {
+        margin-right: -17px;
+    }
+
+    .shops-location__list-shop {
+        height: 554px;
+    }
+
+    .shops-location__list__item {
+        padding-top: 25px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .shops-location {
+        flex-direction: column;
+    }
+
+    .shops-location__list {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .shops-location-title-mobile {
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    .shops-location__list__item-top svg {
+        height: 16px;
+        width: 18px;
+        margin-top: 3px;
+        margin-right: 7px;
+    }
+
+    .shops-location__list__item-address {
+        margin-bottom: 5px;
+        justify-content: space-between;
+    }
+
+    .shops-location__list-shop {
+        height: 364px;
+    }
+
+    .shops-location__list h2 {
+        display: none;
+    }
+
+    .shops-location__list__item {
+        padding: 17px 55px 10px 21px;
+    }
+
+    .shops-location__list__item-top {
+        font-size: 13px;
+        line-height: 24px;
+        margin-top: -4px;
+        margin-bottom: 9px;
+    }
+
+    .shops-location__list__item-address p:first-child {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .shops-location__list__item-choose {
+        display: none;
+    }
+
+    .shop-location-checkbox {
+        display: none;
+    }
+
+    .ymaps-2-1-78-map {
+        width: 728px !important;
+        height: 380px !important;
+    }
+
+    #map {
+        width: 728px;
+        height: 380px;
+        margin-bottom: 41px;
+    }
+
+    .shop-location-checkbox + label {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-radius: 2px;
+        background: #fff;
+        border: 1px solid #fff;
+        text-align: center;
+    }
+
+    .shop-location-checkbox:checked + label {
+        border: 1px solid #6979F8;
+        background: #6979F8;
+    }
+
+    .shop-location-checkbox + label:before {
+        content: '\2713';
+        font-size: 17px;
+        color: #fff;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .shops-location-title-mobile{
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    #map{
+        width: 100%!important;
+        height: 240px!important;
+        margin-bottom: 17px;
+    }
+
+    .ymaps-2-1-78-map{
+        width: 100%!important;
+        height: 240px!important;
+    }
+
+    .shops-location__list-options span{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .shops {
+        margin-bottom: 45px;
+    }
+
+
+    .shops-location__list__item {
+        padding: 8px 43px 10px 6px;
+    }
+}
